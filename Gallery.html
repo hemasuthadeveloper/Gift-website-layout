@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gift Gallery</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+     *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#fff;
+}
+
+/* ================= HEADER ================= */
+header{
+  width:100%;
+  border-bottom:1px solid #eee;
+}
+
+.header-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 60px 8px;
+}
+
+
+/* LOGO */
+.logo{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-left: -45px;
+  animation:logoFloat 3s ease-in-out infinite;
+}
+
+.logo img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+   animation:logoPulse 2s ease-in-out infinite alternate;
+   }
+ @keyframes logoPulse{
+  from{
+    filter: grayscale(100%);
+  }
+  to{
+    filter: grayscale(0%);
+  }
+}
+.logo span{
+  font-size:12px;
+  margin-top:4px;
+  color:#666;
+}
+.logo-text {
+    
+            font-family: 'Lobster', cursive;
+            font-size: 20px;
+            color: white;
+            text-shadow: 
+                -1px -1px 0 #000,  
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000,
+                 0px  2px 0 #000; 
+            letter-spacing: 1px;
+            user-select: none;
+            margin-top: 13px;
+        }
+
+/* NAV */
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:38px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  font-size:20px;
+  font-weight:600;
+  color:#222;
+}
+
+nav ul li a.active{
+  color:#f5a623;
+}
+
+/* ICONS */
+.header-icons{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+.header-icons i{
+  font-size:25px;
+  cursor:pointer;
+  gap:25px;
+}
+
+.profile{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* SEARCH ROW */
+.header-search{
+  display:flex;
+  justify-content:center;
+  padding-bottom:14px;
+  margin-top: -61px;
+  margin-left: 300px;
+}
+
+.search-box{
+  position:relative;
+  width:300px;
+}
+
+.search-box input{
+  width:100%;
+  padding:7px 34px 7px 14px;
+  border:2px solid #f5d58c;
+  border-radius:6px;
+  font-size:23px;
+  outline:none;
+  background-color: #F5F5F5;
+}
+
+.search-box i{
+  position:absolute;
+  right:12px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:13px;
+  color:#444;
+}
+
+.container{
+  width:1100px;
+  margin:40px auto;
+  text-align:center;
+}
+
+/* Heading */
+.container h2{
+  font-size:30px;
+  font-weight:600;
+}
+
+.container p{
+  font-size:20px;
+  color:#f4b400;
+  margin:8px 0 50px;
+}
+
+/* GRID */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  row-gap:60px;
+  align-items:center;
+}
+
+/* CARD */
+.card{
+  text-align:center;
+  margin-left: 20px;
+}
+
+.card img{
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  object-fit:cover;
+ 
+}
+
+.card h4{
+  font-size:14px;
+  font-weight:500;
+  margin-top:10px;
+}
+
+.card span{
+  font-size:13px;
+  color:#555;
+}
+
+.price{
+  display:block;
+  font-size:13px;
+  margin-top:3px;
+}
+
+.price b{
+  color:#e53935;
+}
+
+/* CENTER IMAGE */
+/* CENTER WRAPPER */
+.center-wrapper{
+  grid-column:1 / 4;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  gap:40px;
+}
+
+/* CENTER IMAGE */
+.center-img img{
+  width:250px;
+  height:360px;
+  border-radius:12px;
+}
+
+/* SIDE TEXT */
+.side-text{
+  text-align:left;
+  font-size:14px;
+}
+
+.side-text h4{
+  font-weight:600;
+  margin-bottom:4px;
+  margin-right: 161px;
+  font-size: 20px;
+  margin-left: 40px;
+}
+
+.side-text p{
+  font-size:20px;
+  color:#555;
+  margin-bottom:4px;
+   /* margin-right: 100px; */
+   margin-left: 40px;
+}
+
+.side-text span{
+  font-size:23px;
+  margin-right: 208px;
+  margin-left: 40px;
+}
+
+.side-text b{
+  color:#e53935;
+}
+
+/* ALIGNMENTS */
+.left-text{
+  text-align:right;
+}
+
+.right-text{
+  text-align:left;
+}
+
+
+/* BOTTOM DARK CARDS */
+.dark img{
+  border-radius:18px;
+   width:300px;
+  height:480px;
+  object-fit:cover;
+  border-radius:130px;  
+  margin-top: -80px;
+}
+
+/* EMPTY SPACES FOR ALIGNMENT */
+.empty{
+  visibility:hidden;
+}
+.bottom-oval{
+  width:180px;
+  height:220px;
+  object-fit:cover;
+  border-radius:90px;   /* vertical oval shape */
+}
+.rounded-figma{
+  width:389px;
+  height:466px;
+  object-fit:cover;
+  border-radius:120px;
+ margin-right: -701px;
+ margin-top: -165px;
+}
+.two{
+    margin-left: 358px;
+    margin-right: -250px;
+    font-size: 20px;
+}
+.three{
+     margin-left: 358px;
+    margin-right: -425px;
+    font-size: 20px;
+}
+.price{
+     margin-left: 358px;
+    margin-right: -194px;
+    font-size: 20px;
+}
+/* footer */
+footer{
+    background:#f4c915;
+    padding:40px 90px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+/* Logo section */
+.logo-section{
+    width:200px;
+    text-align:center;
+    margin-left: -84px;
+    margin-top: 10px;
+}
+
+.logo-section img{
+    width:150px;
+    border-radius:50%;
+    animation: logoFilter 1s infinite alternate;
+}
+
+/* FILTER animation (ON / OFF style) */
+@keyframes logoFilter{
+    0%{
+        filter: grayscale(100%);
+    }
+    100%{
+        filter: grayscale(0%);
+    }
+}
+
+.logo-text{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+/* Footer columns */
+.footer-col{
+    line-height:2.2;
+    min-width:200px;
+    
+}
+
+.footer-col h4{
+    margin-bottom:10px;
+   
+}
+
+/* Contact section */
+.contact{
+    line-height:3;
+}
+
+/* Social icons */
+.social-icons{
+    margin-top:15px;
+    margin-left: 80px;
+}
+
+.social-img{
+    width:50px;
+    height:50px;
+  
+    padding:6px;
+    border-radius:50%;
+    cursor:pointer;
+    vertical-align:middle;
+    
+}
+
+.social-icons i{
+    font-size:20px;
+    margin-left:10px;
+    background:#fff;
+    padding:8px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+/* Bottom text */
+.footer-bottom{
+    text-align:center;
+    margin-top:10px;
+    font-size:14px;
+}
+/* PROFILE DROPDOWN */
+.profile-wrapper{
+  position:relative;
+}
+
+.account-box{
+  position:absolute;
+  top:90px;
+  right:-220px;
+  width:420px;
+ 
+  background:#f4c915;
+  border-radius:14px;
+  padding:20px;
+  display:none;
+  z-index:999;
+}
+
+.account-box h3{
+  font-size:22px;
+  margin-bottom:15px;
+  border-bottom:1px dashed #000;
+  padding-bottom:10px;
+}
+
+.account-box ul{
+  list-style:none;
+}
+
+.account-box ul li{
+  background:#000;
+  color:#fff;
+  padding:1px;
+  margin-bottom:22px;
+  width: 300px;
+  font-size:18px;
+  cursor:pointer;
+}
+
+.account-box ul li.logout{
+  margin-bottom:0;
+}
+/* notification  */
+/* NOTIFICATION */
+.notification-wrapper{
+  position:relative;
+}
+
+.notification-popup{
+  position:absolute;
+  top:60px;
+  right:-60px;
+  width:1100px;
+  background:#f4c915;
+  padding:20px 25px;
+  border-radius:8px;
+  display:none;
+  z-index:9999;
+}
+
+.notification-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.notification-popup p{
+  font-size:18px;
+  line-height:1.6;
+}
+
+.close-popup{
+  font-size:24px;
+  cursor:pointer;
+}
+.account-box ul li a{
+  text-decoration:none;
+  color:#fff;
+  display:block;
+  padding:10px;
+}
+@media (max-width: 768px){
+
+/* HEADER */
+.header-top{
+  flex-direction: column;
+  padding: 15px;
+}
+
+.logo{
+  margin-left: 0;
+}
+
+.logo img{
+  width: 120px;
+  height: 120px;
+}
+
+nav ul{
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+nav ul li a{
+  font-size: 16px;
+}
+
+.header-icons{
+  margin-top: 15px;
+}
+
+/* SEARCH */
+.header-search{
+  margin: 10px auto;
+}
+
+.search-box{
+  width: 90%;
+}
+
+.search-box input{
+  font-size: 16px;
+}
+
+/* CONTAINER */
+.container{
+  width: 95%;
+  margin: 20px auto;
+}
+
+.container h2{
+  font-size: 22px;
+}
+
+.container p{
+  font-size: 14px;
+}
+
+/* GALLERY GRID */
+.gallery{
+  grid-template-columns: 1fr;
+  row-gap: 40px;
+}
+
+/* CARDS */
+.card{
+  margin-left: 0;
+}
+
+.card img{
+  width: 220px;
+  height: 220px;
+}
+
+/* CENTER SECTION */
+.center-wrapper{
+  grid-column: auto;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.center-img img{
+  width: 200px;
+  height: 280px;
+}
+
+.side-text{
+  text-align: center;
+}
+
+.side-text h4,
+.side-text p,
+.side-text span{
+  margin: 0;
+  font-size: 16px;
+}
+
+/* BOTTOM IMAGES */
+.dark img{
+  width: 220px;
+  height: 300px;
+  margin-top: 0;
+}
+
+.rounded-figma{
+  width: 220px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.one{
+  text-align: center;
+}
+
+.two,
+.three,
+.price{
+  margin: 0;
+  font-size: 16px;
+}
+
+/* FOOTER */
+.footer-container{
+  flex-direction: column;
+  text-align: center;
+  gap: 25px;
+}
+
+.logo-section{
+  margin-left: 0;
+}
+
+.social-icons{
+  margin-left: 0;
+}
+
+/* DROPDOWNS */
+.account-box{
+  right: 0;
+  width: 90%;
+}
+
+.notification-popup{
+  width: 95%;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+}
+
+}
+@media (min-width: 769px) and (max-width: 1024px){
+
+.header-top{
+  padding: 20px;
+}
+
+.logo{
+  margin-left: 0;
+}
+
+.header-search{
+  margin-left: 0;
+}
+
+/* CONTAINER */
+.container{
+  width: 90%;
+}
+
+/* GALLERY */
+.gallery{
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 50px;
+}
+
+.center-wrapper{
+  grid-column: 1 / -1;
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.center-img img{
+  width: 220px;
+  height: 320px;
+}
+
+/* FOOTER */
+.footer-container{
+  gap: 30px;
+}
+
+.notification-popup{
+  width: 90%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+  <header>
+  <!-- TOP ROW -->
+  <div class="header-top">
+
+    <div class="logo">
+      <img src="logo image.jpg" alt="Logo">
+      <h1 class="logo-text">VibeyGiftoy</h1>
+       
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="Main.html">Home</a></li>
+        <li><a href="Categories.html">Categories</a></li>
+        <li><a  class="active" href="Gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="contact us.html">Contact us</a></li>
+        <li><a href="About us.html">About us</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-icons">
+     <div class="profile-wrapper">
+  <img src="logo human image.jpg" class="profile" id="profileBtn">
+
+  <div class="account-box" id="accountBox">
+    <h3>My Accounts</h3>
+    <ul>
+  <li><a href="personal info.html">Account Information</a></li>
+  <li><a href="download invoice.html">My order</a></li>
+  <li><a href="track order.html">Tracking order</a></li>
+  <li><a href="password manager.html">Password Manager</a></li>
+  <li class="logout"><a href="logout.html">Logout</a></li>
+</ul>
+  </div>
+</div>
+
+      <a href="wishlist.html">
+  <i class="fa-regular fa-heart"></i>
+</a>
+      <a href="shop now second.html">
+  <i class="fa-solid fa-cart-shopping"></i>
+</a>
+     <div class="notification-wrapper">
+  <i class="fa-regular fa-bell" id="bellIcon"></i>
+
+  <!-- NOTIFICATION POPUP -->
+  <div class="notification-popup" id="notificationPopup">
+    <div class="notification-header">
+      🎁 <strong>Order/Delivery Notifications</strong>
+      <span class="close-popup" id="closePopup">&times;</span>
+    </div>
+
+    <p>
+      We offer fast and reliable delivery to ensure your gifts arrive fresh,
+      on time, and beautifully packaged. Choose from standard, express,
+      or same-day delivery options at checkout.
+    </p>
+  </div>
+</div>
+
+     
+    </div>
+
+  </div>
+
+  <!-- SEARCH ROW -->
+  <div class="header-search">
+    <div class="search-box">
+      <input type="text" placeholder="Search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <h2>Gift Gallery</h2>
+  <p>Browse our curated collection of beautiful gifts and get inspired for your next special occasion</p>
+
+  <div class="gallery">
+
+    <!-- Top Left -->
+    <div class="card">
+      <img src="watch image.png" alt="">
+      <!-- <h4>Premium Timepieces</h4>
+      <span>Elegant watches for special occasions</span>
+      <span class="price">From <b>$29</b></span> -->
+    </div>
+
+    <!-- Empty Middle -->
+    <div class="empty"></div>
+
+    <!-- Top Right -->
+    <div class="card">
+      <img src="sted image.png" alt="">
+      <!-- <h4>Artisan Jewelry</h4>
+      <span>Unique handcrafted pieces</span>
+      <span class="price">From <b>$19</b></span> -->
+    </div>
+
+    <!-- Center Image -->
+   <!-- Center Image with Left & Right Text -->
+<div class="center-wrapper">
+
+  <!-- LEFT TEXT -->
+  <div class="side-text left-text">
+    <h4>Tech Essentials</h4>
+    <p>Latest gadgets and accessories</p>
+    <span>From <b>$45</b></span>
+  </div>
+
+  <!-- CENTER IMAGE -->
+  <div class="center-img">
+    <img src="speaker image.png" alt="">
+  </div>
+
+  <!-- RIGHT TEXT -->
+  <div class="side-text right-text">
+    <h4>Custom Frames</h4>
+    <p>Personalized memory keepers</p>
+    <span>From <b>$25</b></span>
+  </div>
+
+</div>
+
+
+    <!-- Bottom Left -->
+    <div class="card dark">
+    <img src="coffee image.png" alt="" class="bottom-oval">
+
+      <!-- <h4>Coffee Collection</h4>
+      <span>Premium coffee and accessories</span> -->
+    </div>
+
+    <!-- Bottom Right -->
+    <div class="one">
+     <img src="bottle image.png" alt="" class="rounded-figma">
+      <h4 class="two">Gourmet Treats</h4>
+     <h4 class="three">Curated food and beverage gifts</h4>
+      <span class="price">From <b>$65</b></span>
+    </div>
+
+  </div>
+</div>
+<!-- footer -->
+<footer>
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="logo-section">
+            <img src="logo image.jpg" alt="Logo">
+            <h1 class="logo-text">VibeyGiftoy</h1>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="footer-col">
+            <h4>Customer service</h4>
+            My Account<br>
+            Checkup<br>
+            FAQ<br>
+            Return
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+            <h4>Company</h4>
+            About us<br>
+            Blogs<br>
+            Contact us<br>
+            Career
+        </div>
+
+        <!-- Information -->
+        <div class="footer-col">
+            <h4>Our information</h4>
+            Privacy<br>
+            Terms & Condition<br>
+            Customer Feed back
+        </div>
+
+        <!-- Contact -->
+        <div class="contact">
+            Mobile: 123-456-789<br>
+            Email: Vibeygif@gmail.com<br>
+            Address: 12, north city-001
+
+            <div class="social-icons">
+                <img src="whats up image.png" alt="WhatsApp" class="social-img">
+               <img src="facebook image.png" alt="WhatsApp" class="social-img">
+               <img src="insta image.png" alt="WhatsApp" class="social-img">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Giftey.co. All rights reserved.<br>
+        <strong>Terms & Conditions | Privacy Policy</strong>
+    </div>
+</footer>
+
+
+</body>
+<script>
+  // icon link 
+const profileBtn = document.getElementById("profileBtn");
+const accountBox = document.getElementById("accountBox");
+
+profileBtn.addEventListener("click", () => {
+  accountBox.style.display =
+    accountBox.style.display === "block" ? "none" : "block";
+});
+
+/* Close when clicking outside */
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".profile-wrapper")) {
+    accountBox.style.display = "none";
+  }
+});
+// notification
+const bellIcon = document.getElementById("bellIcon");
+const notificationPopup = document.getElementById("notificationPopup");
+const closePopup = document.getElementById("closePopup");
+
+/* Toggle popup */
+bellIcon.addEventListener("click", (e) => {
+  e.stopPropagation(); // IMPORTANT
+  notificationPopup.style.display =
+    notificationPopup.style.display === "block" ? "none" : "block";
+});
+
+/* Prevent popup click from closing */
+notificationPopup.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+/* Close with X */
+closePopup.addEventListener("click", () => {
+  notificationPopup.style.display = "none";
+});
+
+/* Close when clicking outside */
+document.addEventListener("click", () => {
+  notificationPopup.style.display = "none";
+});
+</script>
+</html>

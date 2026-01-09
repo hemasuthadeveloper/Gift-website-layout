@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+         *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#fff;
+}
+
+/* ================= HEADER ================= */
+header{
+  width:100%;
+  border-bottom:1px solid #eee;
+}
+
+.header-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 60px 8px;
+}
+
+
+/* LOGO */
+.logo{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-left: -45px;
+  animation:logoFloat 3s ease-in-out infinite;
+}
+
+.logo img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+   animation:logoPulse 2s ease-in-out infinite alternate;
+   }
+ @keyframes logoPulse{
+  from{
+    filter: grayscale(100%);
+  }
+  to{
+    filter: grayscale(0%);
+  }
+}
+.logo span{
+  font-size:12px;
+  margin-top:4px;
+  color:#666;
+}
+.logo-text {
+    
+            font-family: 'Lobster', cursive;
+            font-size: 20px;
+            color: white;
+            text-shadow: 
+                -1px -1px 0 #000,  
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000,
+                 0px  2px 0 #000; 
+            letter-spacing: 1px;
+            user-select: none;
+            margin-top: 13px;
+        }
+
+/* NAV */
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:38px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  font-size:20px;
+  font-weight:600;
+  color:#222;
+}
+
+nav ul li a.active{
+  color:#f5a623;
+}
+
+/* ICONS */
+.header-icons{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+.header-icons i{
+  font-size:25px;
+  cursor:pointer;
+  gap:25px;
+}
+
+.profile{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* SEARCH ROW */
+.header-search{
+  display:flex;
+  justify-content:center;
+  padding-bottom:14px;
+  margin-top: -61px;
+  margin-left: 300px;
+}
+
+.search-box{
+  position:relative;
+  width:300px;
+}
+
+.search-box input{
+  width:100%;
+  padding:7px 34px 7px 14px;
+  border:2px solid #f5d58c;
+  border-radius:6px;
+  font-size:23px;
+  outline:none;
+  background-color: #F5F5F5;
+}
+
+.search-box i{
+  position:absolute;
+  right:12px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:13px;
+  color:#444;
+}
+
+/* ================= CART ================= */
+.cart{
+  width:80%;
+  margin:50px auto;
+}
+
+/* HEADER ROW */
+.cart-head{
+  background:#f4c400;
+  padding:29px 20px;
+  border-radius:6px 6px 0 0;
+  display:grid;
+  grid-template-columns:1fr 2fr 1fr 1fr;
+  font-weight:600;
+}
+
+/* PRODUCT ROW */
+.cart-item{
+  border:1px solid #ccc;
+  padding:-3px;
+  display:grid;
+  grid-template-columns:1fr 2fr 1fr 1fr;
+  align-items:center;
+}
+
+.cart-item img{
+  width:130px;
+  border-radius:6px;
+}
+
+/* QUANTITY */
+.qty{
+  display:flex;
+  align-items:center;
+  border:1px solid #999;
+  border-radius:20px;
+  width:120px;
+  justify-content:space-between;
+  padding:4px 10px;
+  margin-left: 15px;
+}
+.qty span{
+  padding: 0 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border-left: 1.5px solid #000;
+  border-right: 1.5px solid #000;
+ 
+}
+.qty button{
+  background:none;
+  border:none;
+  font-size:18px;
+  cursor:pointer;
+    font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* PRICE */
+.price{
+  color:#20b020;
+  font-weight:600;
+  margin-left: 90px;
+  font-size: 20px;
+}
+.cart-head div {
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  margin-left: 26px;
+
+}
+.cart-item p{
+  font-size: 20px;
+}
+/* MAIN WRAPPER */
+.payment-wrapper{
+  width:85%;
+  margin:40px auto;
+  display:grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap:40px;
+}
+
+/* LEFT */
+.left{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+/* ORDER SUMMARY */
+.summary{
+  border:1.5px solid #444;
+  border-radius:10px;
+  padding:15px;
+}
+
+.summary h4{
+  margin-bottom:10px;
+}
+
+.row{
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
+  margin-bottom:6px;
+}
+
+.total{
+  margin-top:10px;
+  padding-top:10px;
+  border-top:1px solid #aaa;
+  display:flex;
+  justify-content:space-between;
+  font-weight:600;
+}
+
+.total span:last-child{
+  color:green;
+}
+
+/* PRODUCT IMAGE */
+.product-img img{
+  width:500px;
+  height: 300px;
+  border-radius:6px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+/* RIGHT */
+.right{
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+
+/* UPI OPTIONS */
+.upi-options{
+  display:flex;
+  align-items:center;
+  gap:55px;
+ margin-top: 50px;
+}
+
+.upi-options label{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  cursor:pointer;
+}
+
+.upi-logo{
+  width:100px;
+  height:100px;
+  border:1.5px solid #aaa;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.upi-logo img{
+  width:70px;
+  object-fit: cover;
+}
+
+/* UPI FORM */
+.upi-box{
+  border:1.5px dashed #777;
+  border-radius:20px;
+  padding:25px;
+  display:grid;
+  grid-template-columns: 1fr auto;
+  gap:20px;
+  align-items:center;
+  margin-top: 30px;
+  width: 500px;
+  height: 360px;
+}
+
+.upi-form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.upi-form label{
+  font-size:20px;
+  margin-left: 30px;
+}
+
+.upi-form input{
+  padding:10px;
+  border-radius:6px;
+  border:1px solid #aaa;
+  width:220px;
+   margin-left: 30px;
+}
+
+.proceed-btn{
+  margin-top:10px;
+  width:100px;
+  padding:10px;
+  border:none;
+  border-radius:6px;
+  background:#f4c400;
+  cursor:pointer;
+   margin-left:170px;
+}
+
+/* BIG GPay */
+.big-logo{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 28px;
+  background: white;
+  overflow: hidden;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BLUE HALF CIRCLE */
+.big-logo::after{
+  content: "";
+  position: absolute;
+  right: -15px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #6f7bf7;
+  clip-path: circle(70% at 85% 50%);
+}
+
+/* G PAY LOGO IMAGE */
+.big-logo img{
+  position: relative;
+  width: 160px;
+  z-index: 2;
+}
+/* footer */
+footer{
+    background:#f4c915;
+    padding:40px 90px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+/* Logo section */
+.logo-section{
+    width:200px;
+    text-align:center;
+    margin-left: -84px;
+    margin-top: 10px;
+}
+
+.logo-section img{
+    width:150px;
+    border-radius:50%;
+    animation: logoFilter 1s infinite alternate;
+}
+
+/* FILTER animation (ON / OFF style) */
+@keyframes logoFilter{
+    0%{
+        filter: grayscale(100%);
+    }
+    100%{
+        filter: grayscale(0%);
+    }
+}
+
+.logo-text{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+/* Footer columns */
+.footer-col{
+    line-height:2.2;
+    min-width:200px;
+    
+}
+
+.footer-col h4{
+    margin-bottom:10px;
+   
+}
+
+/* Contact section */
+.contact{
+    line-height:3;
+}
+
+/* Social icons */
+.social-icons{
+    margin-top:15px;
+    margin-left: 80px;
+}
+
+.social-img{
+    width:50px;
+    height:50px;
+  
+    padding:6px;
+    border-radius:50%;
+    cursor:pointer;
+    vertical-align:middle;
+    
+}
+
+.social-icons i{
+    font-size:20px;
+    margin-left:10px;
+    background:#fff;
+    padding:8px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+/* Bottom text */
+.footer-bottom{
+    text-align:center;
+    margin-top:10px;
+    font-size:14px;
+}
+.upi-box{
+  position: relative;
+}
+
+/* PAYMENT SUCCESS INSIDE BOX */
+.payment-success{
+  display:none;
+  position:absolute;
+  inset:0;
+  background:#fff;
+  border-radius:20px;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  animation: successFade 0.6s ease forwards;
+  z-index:5;
+}
+
+.payment-success img{
+  width:497px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom:15px;
+  animation: zoomIn 0.6s ease;
+}
+
+.payment-success h2{
+  color:#28a745;
+  font-size:26px;
+}
+/* PROFILE DROPDOWN */
+.profile-wrapper{
+  position:relative;
+}
+
+.account-box{
+  position:absolute;
+  top:90px;
+  right:-220px;
+  width:420px;
+ 
+  background:#f4c915;
+  border-radius:14px;
+  padding:20px;
+  display:none;
+  z-index:999;
+}
+
+.account-box h3{
+  font-size:22px;
+  margin-bottom:15px;
+  border-bottom:1px dashed #000;
+  padding-bottom:10px;
+}
+
+.account-box ul{
+  list-style:none;
+}
+
+.account-box ul li{
+  background:#000;
+  color:#fff;
+  padding:1px;
+  margin-bottom:22px;
+  width: 300px;
+  font-size:18px;
+  cursor:pointer;
+}
+
+.account-box ul li.logout{
+  margin-bottom:0;
+}
+/* notification  */
+/* NOTIFICATION */
+.notification-wrapper{
+  position:relative;
+}
+
+.notification-popup{
+  position:absolute;
+  top:60px;
+  right:-60px;
+  width:1100px;
+  background:#f4c915;
+  padding:20px 25px;
+  border-radius:8px;
+  display:none;
+  z-index:9999;
+}
+
+.notification-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.notification-popup p{
+  font-size:18px;
+  line-height:1.6;
+}
+
+.close-popup{
+  font-size:24px;
+  cursor:pointer;
+}
+.account-box ul li a{
+  text-decoration:none;
+  color:#fff;
+  display:block;
+  padding:10px;
+}
+@media (max-width: 768px){
+
+/* ===== HEADER ===== */
+.header-top{
+  flex-direction: column;
+  padding: 15px;
+}
+
+.logo{
+  margin-left: 0;
+}
+
+.logo img{
+  width: 120px;
+  height: 120px;
+}
+
+nav ul{
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+nav ul li a{
+  font-size: 16px;
+}
+
+.header-icons{
+  margin-top: 15px;
+}
+
+/* SEARCH */
+.header-search{
+  margin: 15px auto 0;
+}
+
+.search-box{
+  width: 90%;
+}
+
+.search-box input{
+  font-size: 16px;
+}
+
+/* ===== CART ===== */
+.cart{
+  width: 95%;
+}
+
+.cart-item{
+  grid-template-columns: 1fr;
+  gap: 10px;
+  text-align: center;
+}
+
+.cart-item img{
+  margin: auto;
+}
+
+.price{
+  margin-left: 0;
+}
+
+/* ===== PAYMENT WRAPPER ===== */
+.payment-wrapper{
+  grid-template-columns: 1fr;
+  width: 95%;
+  gap: 30px;
+}
+
+/* LEFT */
+.product-img img{
+  width: 100%;
+  height: auto;
+}
+
+/* RIGHT */
+.upi-options{
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* UPI BOX */
+.upi-box{
+  grid-template-columns: 1fr;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.upi-form{
+  align-items: center;
+}
+
+.upi-form label,
+.upi-form input{
+  margin-left: 0;
+}
+
+.upi-form input{
+  width: 90%;
+}
+
+.proceed-btn{
+  margin-left: 0;
+  width: 140px;
+}
+
+/* BIG LOGO */
+.big-logo{
+  margin: auto;
+}
+
+/* SUCCESS */
+.payment-success img{
+  width: 100%;
+  height: auto;
+}
+
+/* POPUPS */
+.account-box{
+  right: 0;
+  width: 95%;
+}
+
+.notification-popup{
+  width: 95%;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+/* FOOTER */
+footer{
+  padding: 30px 20px;
+}
+
+.footer-container{
+  flex-direction: column;
+  text-align: center;
+  gap: 25px;
+}
+
+.logo-section{
+  margin-left: 0;
+}
+
+.social-icons{
+  margin-left: 0;
+}
+
+}
+@media (min-width: 769px) and (max-width: 1024px){
+
+.header-top{
+  padding: 20px;
+}
+
+.logo{
+  margin-left: 0;
+}
+
+/* PAYMENT */
+.payment-wrapper{
+  grid-template-columns: 1fr;
+  width: 95%;
+}
+
+/* IMAGE */
+.product-img img{
+  width: 100%;
+  height: auto;
+}
+
+/* UPI BOX */
+.upi-box{
+  width: 100%;
+  height: auto;
+}
+
+/* POPUPS */
+.notification-popup{
+  width: 90%;
+}
+
+.account-box{
+  right: 0;
+}
+
+}
+
+    </style>
+</head>
+<body>
+   <header>
+  <!-- TOP ROW -->
+  <div class="header-top">
+
+    <div class="logo">
+      <img src="logo image.jpg" alt="Logo">
+      <h1 class="logo-text">VibeyGiftoy</h1>
+       
+    </div>
+
+    <nav>
+      <ul>
+        <li><a  href="Main.html">Home</a></li>
+        <li><a href="Categories.html">Categories</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="contact us.html">Contact us</a></li>
+        <li><a href="About us.html">About us</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-icons">
+     <div class="profile-wrapper">
+  <img src="logo human image.jpg" class="profile" id="profileBtn">
+
+  <div class="account-box" id="accountBox">
+    <h3>My Accounts</h3>
+    <ul>
+  <li><a href="personal info.html">Account Information</a></li>
+  <li><a href="download invoice.html">My order</a></li>
+  <li><a href="track order.html">Tracking order</a></li>
+  <li><a href="password manager.html">Password Manager</a></li>
+  <li class="logout"><a href="logout.html">Logout</a></li>
+</ul>
+  </div>
+</div>
+
+      <a href="wishlist.html">
+  <i class="fa-regular fa-heart"></i>
+</a>
+      <a href="shop now second.html">
+  <i class="fa-solid fa-cart-shopping"></i>
+</a>
+     <div class="notification-wrapper">
+  <i class="fa-regular fa-bell" id="bellIcon"></i>
+
+  <!-- NOTIFICATION POPUP -->
+  <div class="notification-popup" id="notificationPopup">
+    <div class="notification-header">
+      🎁 <strong>Order/Delivery Notifications</strong>
+      <span class="close-popup" id="closePopup">&times;</span>
+    </div>
+
+    <p>
+      We offer fast and reliable delivery to ensure your gifts arrive fresh,
+      on time, and beautifully packaged. Choose from standard, express,
+      or same-day delivery options at checkout.
+    </p>
+  </div>
+</div>
+
+     
+    </div>
+
+  </div>
+
+  <!-- SEARCH ROW -->
+  <div class="header-search">
+    <div class="search-box">
+      <input type="text" placeholder="Search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+  </div>
+</header>
+
+
+<!-- CART TABLE -->
+<div class="cart">
+
+  <!-- <div class="cart-head">
+    <div>Product</div>
+    <div>Names</div>
+    <div>Quantity</div>
+    <div></div>
+  </div> -->
+
+  <div class="cart-item">
+    <img src="shop image.png">
+    <p>The Picture Frame set</p>
+
+   22 August 2025
+
+    <div class="price">₹1000</div>
+  </div>
+
+</div>
+<div class="payment-wrapper">
+
+  <!-- LEFT -->
+  <div class="left">
+    <div class="summary">
+      <h4>Order Summary</h4><hr>
+      <div class="row"><span>Items</span><span>1</span></div>
+      <div class="row"><span>Subtotal</span><span>Rs.1200</span></div>
+      <div class="row"><span>Shipping</span><span>Rs.00.0</span></div>
+      <div class="row"><span>Taxes</span><span>Rs.00.0</span></div>
+      <div class="row"><span>Coupen Discount</span><span>Rs.200</span></div>
+
+      <div class="total">
+        <span>Total</span>
+        <span>₹1000</span>
+      </div>
+    </div>
+
+    <div class="product-img">
+      <img src="shop image.png" alt="">
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+
+    <!-- UPI OPTIONS -->
+    <div class="upi-options">
+      <label>
+        <input type="radio" name="upi">
+        <div class="upi-logo">
+          <img src="circle gpay.png">
+        </div>
+      </label>
+
+      <label>
+        <input type="radio" name="upi">
+        <div class="upi-logo">
+          <img src="circle phone pay.png">
+        </div>
+      </label>
+
+      <label>
+        <input type="radio" name="upi">
+        <div class="upi-logo">
+          <img src="circle paytm.png">
+        </div>
+      </label>
+    </div>
+
+    <!-- UPI FORM -->
+    <div class="upi-box">
+
+  <div class="upi-form" id="upiForm">
+    <label>Name :</label>
+    <input type="text">
+
+    <label>Enter UPI ID</label>
+    <input type="text">
+
+    <button class="proceed-btn">Proceed</button>
+  </div>
+
+  <div class="big-logo" id="upiLogo">
+    <img src="circle gpay.png">
+  </div>
+
+  <!-- PAYMENT SUCCESS -->
+  <div class="payment-success" id="paymentSuccess">
+    <img src="birthday gift.png" alt="Success">
+    <h2>Payment Done Successfully</h2>
+  </div>
+
+</div>
+</div>
+</div>
+
+<!-- footer -->
+<footer>
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="logo-section">
+            <img src="logo image.jpg" alt="Logo">
+            <h1 class="logo-text">VibeyGiftoy</h1>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="footer-col">
+            <h4>Customer service</h4>
+            My Account<br>
+            Checkup<br>
+            FAQ<br>
+            Return
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+            <h4>Company</h4>
+            About us<br>
+            Blogs<br>
+            Contact us<br>
+            Career
+        </div>
+
+        <!-- Information -->
+        <div class="footer-col">
+            <h4>Our information</h4>
+            Privacy<br>
+            Terms & Condition<br>
+            Customer Feed back
+        </div>
+
+        <!-- Contact -->
+        <div class="contact">
+            Mobile: 123-456-789<br>
+            Email: Vibeygif@gmail.com<br>
+            Address: 12, north city-001
+
+            <div class="social-icons">
+                <img src="whats up image.png" alt="WhatsApp" class="social-img">
+               <img src="facebook image.png" alt="WhatsApp" class="social-img">
+               <img src="insta image.png" alt="WhatsApp" class="social-img">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Giftey.co. All rights reserved.<br>
+        <strong>Terms & Conditions | Privacy Policy</strong>
+    </div>
+</footer>
+
+    
+</body>
+<script>
+document.querySelector(".proceed-btn").addEventListener("click", function () {
+  document.getElementById("upiForm").style.display = "none";
+  document.getElementById("upiLogo").style.display = "none";
+  document.getElementById("paymentSuccess").style.display = "flex";
+});
+// icon link 
+const profileBtn = document.getElementById("profileBtn");
+const accountBox = document.getElementById("accountBox");
+
+profileBtn.addEventListener("click", () => {
+  accountBox.style.display =
+    accountBox.style.display === "block" ? "none" : "block";
+});
+
+/* Close when clicking outside */
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".profile-wrapper")) {
+    accountBox.style.display = "none";
+  }
+});
+// notification
+const bellIcon = document.getElementById("bellIcon");
+const notificationPopup = document.getElementById("notificationPopup");
+const closePopup = document.getElementById("closePopup");
+
+/* Toggle popup */
+bellIcon.addEventListener("click", (e) => {
+  e.stopPropagation(); // IMPORTANT
+  notificationPopup.style.display =
+    notificationPopup.style.display === "block" ? "none" : "block";
+});
+
+/* Prevent popup click from closing */
+notificationPopup.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+/* Close with X */
+closePopup.addEventListener("click", () => {
+  notificationPopup.style.display = "none";
+});
+
+/* Close when clicking outside */
+document.addEventListener("click", () => {
+  notificationPopup.style.display = "none";
+});
+///////////////////
+document.querySelector(".proceed-btn").addEventListener("click", function () {
+  document.getElementById("upiForm").style.display = "none";
+  document.getElementById("upiLogo").style.display = "none";
+  document.getElementById("paymentSuccess").style.display = "flex";
+
+  // ✅ Redirect after 3 seconds
+  setTimeout(function () {
+    window.location.href = "download invoice.html";
+  }, 2000); // 3000ms = 3 seconds
+});
+</script>
+
+
+</html>

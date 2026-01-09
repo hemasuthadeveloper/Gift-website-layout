@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Account - Logout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+      *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#fff;
+}
+
+/* ================= HEADER ================= */
+header{
+  width:100%;
+  border-bottom:1px solid #eee;
+}
+
+.header-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 60px 8px;
+}
+
+
+/* LOGO */
+.logo{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-left: -45px;
+  animation:logoFloat 3s ease-in-out infinite;
+}
+
+.logo img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+   animation:logoPulse 2s ease-in-out infinite alternate;
+   }
+ @keyframes logoPulse{
+  from{
+    filter: grayscale(100%);
+  }
+  to{
+    filter: grayscale(0%);
+  }
+}
+.logo span{
+  font-size:12px;
+  margin-top:4px;
+  color:#666;
+}
+.logo-text {
+    
+            font-family: 'Lobster', cursive;
+            font-size: 20px;
+            color: white;
+            text-shadow: 
+                -1px -1px 0 #000,  
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000,
+                 0px  2px 0 #000; 
+            letter-spacing: 1px;
+            user-select: none;
+            margin-top: 13px;
+        }
+
+/* NAV */
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:38px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  font-size:20px;
+  font-weight:600;
+  color:#222;
+}
+
+nav ul li a.active{
+  color:#f5a623;
+}
+
+/* ICONS */
+.header-icons{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+.header-icons i{
+  font-size:25px;
+  cursor:pointer;
+  gap:25px;
+}
+
+.profile{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* SEARCH ROW */
+.header-search{
+  display:flex;
+  justify-content:center;
+  padding-bottom:14px;
+  margin-top: -61px;
+  margin-left: 300px;
+}
+
+.search-box{
+  position:relative;
+  width:300px;
+}
+
+.search-box input{
+  width:100%;
+  padding:7px 34px 7px 14px;
+  border:2px solid #f5d58c;
+  border-radius:6px;
+  font-size:23px;
+  outline:none;
+  background-color: #F5F5F5;
+}
+
+.search-box i{
+  position:absolute;
+  right:12px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:13px;
+  color:#444;
+}
+/* ================= PAGE ================= */
+.page-container{
+    width:85%;
+    margin:40px auto;
+}
+
+/* TITLE */
+.page-title{
+    text-align:center;
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:40px;
+}
+
+/* ACCOUNT LAYOUT */
+.account-wrapper{
+    display:flex;
+    gap:70px;
+}
+
+/* LEFT MENU */
+.account-menu{
+    width:360px;
+}
+
+.account-menu button{
+    width:100%;
+    padding:26px;
+    margin-bottom:16px;
+    border-radius:8px;
+    border:none;
+    font-size:15px;
+    cursor:pointer;
+    background:#F1C40F;
+    color:#fff;
+    border: 2px solid black;
+     box-shadow: 5px 5px 15px rgba(86, 88, 86, 0.4);
+}
+
+.account-menu .logout{
+    background:#000;
+}
+
+/* RIGHT CONTENT */
+.account-content{
+    flex:1;
+    text-align:center;
+}
+
+.account-content h3{
+    font-size:28px;
+    margin-bottom:20px;
+    margin-left: -350px;
+    margin-top: 30px;
+    line-height: 60px;
+}
+
+.account-content p{
+    font-size:20px;
+    margin-bottom:25px;
+    color:#333;
+    margin-left: -121px;
+}
+
+.logout-btn{
+    background:#F1C40F;
+    color:#fff;
+    padding:12px 45px;
+    border:none;
+    border-radius:6px;
+    font-size:15px;
+    cursor:pointer;
+    margin-left: -63px;
+}
+
+/* FOOTER */
+    .footer {
+  background: #f7a400;
+  position: relative;
+  padding: 60px 60px 40px 200px;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+/* OVAL CONTAINER */
+.footer-girl-wrapper {
+  position: absolute;
+  left: 25px;
+  bottom: 0;
+  width: 90px;
+  height: 140px;
+  border-radius: 100px 100px 0 0; /* OVAL SHAPE */
+  overflow: hidden;
+  background: #f7a400;
+}
+
+/* IMAGE */
+.footer-girl-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+    background: #f7a400;
+    padding: 60px 50px 35px;
+    color: #000;
+    position: relative;
+    overflow: visible;   /* IMPORTANT */
+}
+
+
+/* MAIN GRID */
+.footer-main{
+    display:grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr 1.2fr 1.4fr;
+    gap:30px;
+    align-items:start;
+    margin-top: -41px;
+}
+
+/* GIRL IMAGE */
+.girl-img{
+    position:absolute;
+    bottom:0;
+    left:20px;
+    height:100px;
+    border-radius: 150%;
+}
+
+/* LEFT CONTENT */
+.footer-left{
+    padding-left:101px; /* space for girl image */
+}
+
+.footer-left img.logo{
+    width:90px;
+    margin-top: -14px;
+}
+
+.follow{
+    font-size:19px;
+    margin:8px 0 6px;
+    font-weight:600;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;     /* soft square like Figma */
+  background: #fff;
+  padding: 6px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* HEADINGS */
+.footer h4{
+    font-size:22px;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+/* LISTS */
+.footer ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.footer ul li{
+    font-size:17px;
+    margin-bottom:6px;
+}
+
+/* CONTACT */
+.contact li{
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+}
+
+/* BOTTOM */
+.footer-bottom{
+    text-align:center;
+    font-size:15px;
+    margin-top:10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);;
+    margin-left: 230px;
+
+}
+/* new */
+.account-dropdown {
+  position: absolute;
+  top: 115px;
+  right: 27;
+  width: 235px;
+  background: #4caf50;
+  border-radius: 5px;
+  display: none;
+  flex-direction: column;
+  padding: 10px 0;
+  z-index: 100;
+}
+
+.account-dropdown a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.account-dropdown a:hover {
+  background: rgba(255,255,255,0.2);
+}
+/* bell */
+/* Popup container */
+.popup {
+  position: fixed;
+  top: 120px;
+  left: 70%;
+  transform: translateX(-50%);
+  width: 700px;
+  background: #4caf50;
+  color: #000;
+  border-radius: 20px;
+  padding: 30px 40px;
+  display: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Close icon */
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Title */
+.popup h3 {
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+/* List style */
+.popup ul {
+  padding-left: 20px;
+}
+
+.popup li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+/* ==================== MEDIA QUERIES ==================== */
+
+/* =================== LAPTOP / LARGE TABLET (<=1024px) =================== */
+@media (max-width: 1024px) {
+  /* Header */
+  .figma-header {
+    padding: 18px 30px;
+  }
+  .figma-search {
+    width: 500px;
+    padding: 8px 14px;
+  }
+  .figma-search input {
+    font-size: 18px;
+  }
+  .figma-menu {
+    gap: 25px;
+    font-size: 18px;
+  }
+
+  /* Account Section */
+  .account-wrapper {
+    gap: 40px;
+  }
+  .account-menu {
+    width: 220px;
+  }
+  .account-menu button {
+    font-size: 14px;
+    padding: 20px;
+  }
+  .account-content h3 {
+    font-size: 24px;
+    margin-left: -250px;
+  }
+  .account-content p {
+    font-size: 18px;
+    margin-left: -100px;
+  }
+  .logout-btn {
+    margin-left: -50px;
+    padding: 12px 35px;
+    font-size: 14px;
+  }
+
+  /* Footer */
+  .footer-main {
+    grid-template-columns: 1.5fr 1fr 1.2fr 1.2fr 1.4fr;
+    gap: 20px;
+  }
+  .footer-girl-wrapper {
+    width: 80px;
+    height: 130px;
+  }
+
+  /* Popup */
+  .popup {
+    width: 600px;
+    padding: 25px 30px;
+  }
+
+  /* Account Dropdown */
+  .account-dropdown {
+    width: 200px;
+    top: 105px;
+  }
+}
+
+/* =================== TABLET / MOBILE (<=768px) =================== */
+@media (max-width: 768px) {
+  /* Header */
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .figma-search {
+    width: 100%;
+  }
+  .figma-menu {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* Account Section */
+  .account-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .account-menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .account-menu button {
+    flex: 1 1 calc(50% - 10px);
+    padding: 18px;
+    font-size: 14px;
+  }
+  .account-content {
+    width: 100%;
+    text-align: center;
+  }
+  .account-content h3 {
+    font-size: 22px;
+    margin-left: 0;
+  }
+  .account-content p {
+    font-size: 16px;
+    margin-left: 0;
+  }
+  .logout-btn {
+    margin-left: 0;
+    width: 100%;
+    padding: 12px 0;
+    font-size: 16px;
+  }
+
+  /* Footer */
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .footer-girl-wrapper {
+    display: none;
+  }
+  .footer-bottom {
+    margin-left: 0;
+    font-size: 13px;
+  }
+
+  /* Popup */
+  .popup {
+    width: 90%;
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  /* Account Dropdown */
+  .account-dropdown {
+    width: 180px;
+    font-size: 18px;
+    right: 10px;
+  }
+}
+
+/* =================== SMALL MOBILE (<=480px) =================== */
+@media (max-width: 480px) {
+  /* Header */
+  .figma-search input {
+    font-size: 16px;
+  }
+  .figma-menu a {
+    font-size: 16px;
+  }
+
+  /* Sidebar buttons */
+  .account-menu {
+    flex-direction: column;
+  }
+  .account-menu button {
+    flex: 1 1 100%;
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  /* Account Content */
+  .account-content h3 {
+    font-size: 20px;
+  }
+  .account-content p {
+    font-size: 14px;
+  }
+  .logout-btn {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  /* Footer */
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Popup */
+  .popup {
+    width: 95%;
+    padding: 15px;
+    font-size: 13px;
+  }
+
+  /* Account Dropdown */
+  .account-dropdown {
+    width: 160px;
+    font-size: 16px;
+    right: 5px;
+  }
+}
+/* footer */
+footer{
+    background:#f4c915;
+    padding:40px 90px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+/* Logo section */
+.logo-section{
+    width:200px;
+    text-align:center;
+    margin-left: -84px;
+    margin-top: 10px;
+}
+
+.logo-section img{
+    width:150px;
+    border-radius:50%;
+    animation: logoFilter 1s infinite alternate;
+}
+
+/* FILTER animation (ON / OFF style) */
+@keyframes logoFilter{
+    0%{
+        filter: grayscale(100%);
+    }
+    100%{
+        filter: grayscale(0%);
+    }
+}
+
+.logo-text{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+/* Footer columns */
+.footer-col{
+    line-height:2.2;
+    min-width:200px;
+    
+}
+
+.footer-col h4{
+    margin-bottom:10px;
+   
+}
+
+/* Contact section */
+.contact{
+    line-height:3;
+}
+
+/* Social icons */
+.social-icons{
+    margin-top:15px;
+    margin-left: 80px;
+}
+
+.social-img{
+    width:50px;
+    height:50px;
+  
+    padding:6px;
+    border-radius:50%;
+    cursor:pointer;
+    vertical-align:middle;
+    
+}
+
+.social-icons i{
+    font-size:20px;
+    margin-left:10px;
+    background:#fff;
+    padding:8px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+/* Bottom text */
+.footer-bottom{
+    text-align:center;
+    margin-top:10px;
+    font-size:14px;
+}
+/* PROFILE DROPDOWN */
+.profile-wrapper{
+  position:relative;
+}
+
+.account-box{
+  position:absolute;
+  top:90px;
+  right:-220px;
+  width:420px;
+ 
+  background:#f4c915;
+  border-radius:14px;
+  padding:20px;
+  display:none;
+  z-index:999;
+}
+
+.account-box h3{
+  font-size:22px;
+  margin-bottom:15px;
+  border-bottom:1px dashed #000;
+  padding-bottom:10px;
+}
+
+.account-box ul{
+  list-style:none;
+}
+
+.account-box ul li{
+  background:#000;
+  color:#fff;
+  padding:1px;
+  margin-bottom:22px;
+  width: 300px;
+  font-size:18px;
+  cursor:pointer;
+}
+
+.account-box ul li.logout{
+  margin-bottom:0;
+}
+/* notification  */
+/* NOTIFICATION */
+.notification-wrapper{
+  position:relative;
+}
+
+.notification-popup{
+  position:absolute;
+  top:60px;
+  right:-60px;
+  width:1100px;
+  background:#f4c915;
+  padding:20px 25px;
+  border-radius:8px;
+  display:none;
+  z-index:9999;
+}
+
+.notification-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.notification-popup p{
+  font-size:18px;
+  line-height:1.6;
+}
+
+.close-popup{
+  font-size:24px;
+  cursor:pointer;
+}
+.account-box ul li a{
+  text-decoration:none;
+  color:#fff;
+  display:block;
+  padding:10px;
+}
+/* ==================== MEDIA QUERIES ==================== */
+
+/* LAPTOP / LARGE TABLET (≤1024px) */
+@media (max-width: 1024px) {
+  /* Header */
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 30px;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .header-search {
+    margin-left: 0;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  /* Account Section */
+  .account-wrapper {
+    gap: 30px;
+  }
+  .account-menu {
+    width: 250px;
+  }
+  .account-menu button {
+    font-size: 14px;
+    padding: 20px;
+  }
+  .account-content h3 {
+    font-size: 24px;
+    margin-left: -200px;
+  }
+  .account-content p {
+    font-size: 18px;
+    margin-left: -80px;
+  }
+  .logout-btn {
+    margin-left: -40px;
+    font-size: 14px;
+    padding: 12px 35px;
+  }
+
+  /* Footer */
+  .footer-main {
+    gap: 20px;
+  }
+  .footer-bottom {
+    margin-left: 0;
+  }
+}
+
+/* TABLET / MOBILE (≤768px) */
+@media (max-width: 768px) {
+  /* Header */
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .header-search {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* Account Section */
+  .account-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .account-menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .account-menu button {
+    flex: 1 1 calc(50% - 10px);
+    font-size: 14px;
+    padding: 18px;
+  }
+  .account-content {
+    width: 100%;
+    text-align: center;
+  }
+  .account-content h3,
+  .account-content p {
+    margin-left: 0;
+  }
+  .logout-btn {
+    margin-left: 0;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 0;
+  }
+
+  /* Footer */
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .footer-girl-wrapper {
+    display: none;
+  }
+  .footer-bottom {
+    font-size: 13px;
+  }
+}
+
+/* SMALL MOBILE (≤480px) */
+@media (max-width: 480px) {
+  /* Header */
+  nav ul li a {
+    font-size: 16px;
+  }
+  .header-icons i,
+  .profile {
+    width: 50px;
+    height: 50px;
+  }
+  .header-search input {
+    font-size: 14px;
+  }
+
+  /* Account Section */
+  .account-menu {
+    flex-direction: column;
+  }
+  .account-menu button {
+    flex: 1 1 100%;
+    font-size: 13px;
+    padding: 12px;
+  }
+  .account-content h3 {
+    font-size: 20px;
+  }
+  .account-content p {
+    font-size: 14px;
+  }
+  .logout-btn {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  /* Footer */
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .footer-bottom {
+    font-size: 12px;
+    margin-left: 0;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+ <header>
+  <!-- TOP ROW -->
+  <div class="header-top">
+
+    <div class="logo">
+      <img src="logo image.jpg" alt="Logo">
+      <h1 class="logo-text">VibeyGiftoy</h1>
+       
+    </div>
+
+    <nav>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="Categories.html">Categories</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="contact us.html">Contact us</a></li>
+        <li><a href="About us.html">About us</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-icons">
+     <div class="profile-wrapper">
+  <img src="logo human image.jpg" class="profile" id="profileBtn">
+
+  <div class="account-box" id="accountBox">
+    <h3>My Accounts</h3>
+   <ul>
+  <li><a href="personal info.html">Account Information</a></li>
+  <li><a href="download invoice.html">My order</a></li>
+  <li><a href="track order.html">Tracking order</a></li>
+  <li><a href="password manager.html">Password Manager</a></li>
+  <li class="logout"><a href="logout.html">Logout</a></li>
+</ul>
+  </div>
+</div>
+
+      <a href="wishlist.html">
+  <i class="fa-regular fa-heart"></i>
+</a>
+      <a href="shop now second.html">
+  <i class="fa-solid fa-cart-shopping"></i>
+</a>
+     <div class="notification-wrapper">
+  <i class="fa-regular fa-bell" id="bellIcon"></i>
+
+  <!-- NOTIFICATION POPUP -->
+  <div class="notification-popup" id="notificationPopup">
+    <div class="notification-header">
+      🎁 <strong>Order/Delivery Notifications</strong>
+      <span class="close-popup" id="closePopup">&times;</span>
+    </div>
+
+    <p>
+      We offer fast and reliable delivery to ensure your gifts arrive fresh,
+      on time, and beautifully packaged. Choose from standard, express,
+      or same-day delivery options at checkout.
+    </p>
+  </div>
+</div>
+
+     
+    </div>
+
+  </div>
+
+  <!-- SEARCH ROW -->
+  <div class="header-search">
+    <div class="search-box">
+      <input type="text" placeholder="Search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="page-container">
+
+    <div class="page-title">My Account</div>
+
+    <div class="account-wrapper">
+
+        <!-- LEFT MENU -->
+        <div class="account-menu">
+            <button onclick="goPersonalInfo()">Personal Information</button>
+
+     <button onclick="goOrders()">My Order</button>
+<button class="black" onclick="goPassword()">Password Manager</button>
+<button onclick="logout()">Logout</button>
+
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="account-content">
+            <h3>Log Out</h3>
+            <p>Are you sure, you want to log out?</p>
+            <button class="logout-btn">Yes, Logout</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- footer -->
+<footer>
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="logo-section">
+            <img src="logo image.jpg" alt="Logo">
+            <h1 class="logo-text">VibeyGiftoy</h1>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="footer-col">
+            <h4>Customer service</h4>
+            My Account<br>
+            Checkup<br>
+            FAQ<br>
+            Return
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+            <h4>Company</h4>
+            About us<br>
+            Blogs<br>
+            Contact us<br>
+            Career
+        </div>
+
+        <!-- Information -->
+        <div class="footer-col">
+            <h4>Our information</h4>
+            Privacy<br>
+            Terms & Condition<br>
+            Customer Feed back
+        </div>
+
+        <!-- Contact -->
+        <div class="contact">
+            Mobile: 123-456-789<br>
+            Email: Vibeygif@gmail.com<br>
+            Address: 12, north city-001
+
+            <div class="social-icons">
+                <img src="whats up image.png" alt="WhatsApp" class="social-img">
+               <img src="facebook image.png" alt="WhatsApp" class="social-img">
+               <img src="insta image.png" alt="WhatsApp" class="social-img">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Giftey.co. All rights reserved.<br>
+        <strong>Terms & Conditions | Privacy Policy</strong>
+    </div>
+</footer>
+
+    
+</body>
+<script>
+  // icon link 
+const profileBtn = document.getElementById("profileBtn");
+const accountBox = document.getElementById("accountBox");
+
+profileBtn.addEventListener("click", () => {
+  accountBox.style.display =
+    accountBox.style.display === "block" ? "none" : "block";
+});
+
+/* Close when clicking outside */
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".profile-wrapper")) {
+    accountBox.style.display = "none";
+  }
+});
+// notification
+const bellIcon = document.getElementById("bellIcon");
+const notificationPopup = document.getElementById("notificationPopup");
+const closePopup = document.getElementById("closePopup");
+
+/* Toggle popup */
+bellIcon.addEventListener("click", (e) => {
+  e.stopPropagation(); // IMPORTANT
+  notificationPopup.style.display =
+    notificationPopup.style.display === "block" ? "none" : "block";
+});
+
+/* Prevent popup click from closing */
+notificationPopup.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+/* Close with X */
+closePopup.addEventListener("click", () => {
+  notificationPopup.style.display = "none";
+});
+
+/* Close when clicking outside */
+document.addEventListener("click", () => {
+  notificationPopup.style.display = "none";
+});
+
+</script>
+</html>

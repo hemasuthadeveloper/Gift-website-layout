@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+      
+        *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#fff;
+}
+
+/* ================= HEADER ================= */
+header{
+  width:100%;
+  border-bottom:1px solid #eee;
+}
+
+.header-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 60px 8px;
+}
+
+
+/* LOGO */
+.logo{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-left: -45px;
+  animation:logoFloat 3s ease-in-out infinite;
+}
+
+.logo img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+   animation:logoPulse 2s ease-in-out infinite alternate;
+   }
+ @keyframes logoPulse{
+  from{
+    filter: grayscale(100%);
+  }
+  to{
+    filter: grayscale(0%);
+  }
+}
+.logo span{
+  font-size:12px;
+  margin-top:4px;
+  color:#666;
+}
+.logo-text {
+    
+            font-family: 'Lobster', cursive;
+            font-size: 20px;
+            color: white;
+            text-shadow: 
+                -1px -1px 0 #000,  
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000,
+                 0px  2px 0 #000; 
+            letter-spacing: 1px;
+            user-select: none;
+            margin-top: 13px;
+        }
+
+/* NAV */
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:38px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  font-size:20px;
+  font-weight:600;
+  color:#222;
+}
+
+nav ul li a.active{
+  color:#f5a623;
+}
+
+/* ICONS */
+.header-icons{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+.header-icons i{
+  font-size:25px;
+  cursor:pointer;
+  gap:25px;
+}
+
+.profile{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* SEARCH ROW */
+.header-search{
+  display:flex;
+  justify-content:center;
+  padding-bottom:14px;
+  margin-top: -61px;
+  margin-left: 300px;
+}
+
+.search-box{
+  position:relative;
+  width:300px;
+}
+
+.search-box input{
+  width:100%;
+  padding:7px 34px 7px 14px;
+  border:2px solid #f5d58c;
+  border-radius:6px;
+  font-size:23px;
+  outline:none;
+  background-color: #F5F5F5;
+}
+
+.search-box i{
+  position:absolute;
+  right:12px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:13px;
+  color:#444;
+}
+/* ================= HERO ================= */
+.hero{
+  /* margin:20px 60px; */
+  height:320px;
+  border-radius:16px;
+  overflow:hidden;
+  background:url("hero image new.png") center/cover no-repeat;
+  margin-top: 30px;
+  position:relative;
+   animation:logoPulse 2s ease-in-out infinite alternate;
+   }
+ @keyframes logoPulse{
+  from{
+    filter: grayscale(100%);
+  }
+  to{
+    filter: grayscale(0%);
+  }
+}
+
+
+/* DARK OVERLAY */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to right,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.3) 45%,
+    rgba(0,0,0,0.7) 100%
+  );
+}
+
+/* CONTENT */
+.hero-content{
+  position:absolute;
+  right:70px;
+  top:50%;
+  transform:translateY(-50%);
+  max-width:460px;
+  color:#fff;
+  z-index:2;
+}
+
+.hero h1{
+  font-size:42px;
+  font-weight:700;
+  margin-bottom:12px;
+  margin-left: -200px;
+}
+
+.hero p{
+  font-size:24px;
+  line-height:1.6;
+  opacity:0.95;
+  margin-left: -200px;
+  
+}
+
+/* BUTTONS */
+.hero-buttons{
+  margin-top:22px;
+  display:flex;
+  gap:14px;
+  margin-left: -200px;
+}
+
+.btn-primary{
+  background:#f5b400;
+  color:white;
+  padding:10px 40px;
+  border-radius:30px;
+  font-size:20px;
+  font-weight:600;
+  text-decoration:none;
+}
+
+.btn-outline{
+  border:2px solid #f5b400;
+  color:#f5b400;
+  padding:10px 22px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:600;
+  text-decoration:none;
+}
+.enquiry-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  /* The custom underline line */
+  .enquiry-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: #ffffff;
+  }
+
+  /* The left dot on the underline */
+  .enquiry-link::before {
+    content: '';
+    position: absolute;
+    bottom: -7px; /* Adjusted to center on the line */
+    left: -2px;
+    width: 5px;
+    height: 5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+
+  /* The right dot on the underline */
+  .enquiry-link .dot-right {
+    position: absolute;
+    bottom: -7px;
+    right: -2px;
+    width: 5px;
+    height: 5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+
+  /* Hover effect for interactivity */
+  .enquiry-link:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+
+/* ================= RATING LINE ================= */
+.hero-rating{
+  position:absolute;
+  right:70px;
+  bottom:24px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  z-index:2;
+}
+
+/* AVATARS */
+.rating-avatars{
+  display:flex;
+}
+
+.rating-avatars img{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  border:2px solid #fff;
+  margin-left:-10px;
+  object-fit:cover;
+    animation:logoPulse 2s ease-in-out infinite alternate;
+   }
+ @keyframes logoPulse{
+  from{
+    filter: grayscale(100%);
+  }
+  to{
+    filter: grayscale(0%);
+  }
+}
+
+
+/* RATING TEXT */
+.rating-text{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:13px;
+  color:#fff;
+}
+
+.rating-text span{
+  font-weight:600;
+}
+
+.star{
+  color:#f5b400;
+  font-size:14px;
+}
+/* ================= WHY CHOOSE US ================= */
+.section{
+  padding:50px 37px;
+}
+
+.section-title{
+  text-align:center;
+  font-weight:600;
+  margin-bottom:35px;
+  font-size: 25px;
+}
+
+.choose-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:90px;
+  text-align:center;
+}
+
+.choose-item img{
+  width:150px;
+  height:200px;
+  border-radius:40px;
+  object-fit:cover;
+  margin-bottom:12px;
+}
+
+.choose-item p{
+  font-size:15px;
+}
+
+/* ================= FEATURED ================= */
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:48px;
+}
+
+.product-card{
+  border:1px solid black;
+  border-radius:14px;
+  /* padding:24px; */
+  width: 250px;
+  height: 400px;
+  position:relative;
+}
+
+.product-card img{
+  /* width:100%; */
+  width: 188px;
+  height: 250px;
+  border-radius:12px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.heart-icon{
+  position:absolute;
+  top:24px;
+  right:37px;
+  width:26px;
+  height:26px;
+  background:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  box-shadow:0 2px 6px rgba(0,0,0,0.15);
+}
+
+.heart-icon svg{
+  width:24px;
+  height:24px;
+  fill:none;
+  stroke:#f5b400;      /* YELLOW HEART */
+  stroke-width:2;
+}
+.heart-icon.active svg{
+  fill:#f5b400;
+  stroke:#f5b400;
+}
+
+.product-title{
+  font-size:17px;
+  margin-top:10px;
+  text-align: center;
+}
+
+.price{
+  font-size:12px;
+  margin:6px 0;
+}
+
+.price span{
+  color:red;
+  font-weight:600;
+}
+
+.buttons{
+  display:flex;
+  gap:8px;
+}
+
+.btn-yellow{
+  background:#f5b400;
+  border:none;
+  padding:6px 10px;
+  border-radius:14px;
+  font-size:11px;
+  font-weight:600;
+  margin-left: 35px;
+}
+
+.btn-outline{
+  background:#fff;
+  color: #000;
+  border:1px solid #ccc;
+  padding:6px 10px;
+  border-radius:14px;
+  font-size:11px;
+}
+.price{
+    color: red;
+    font-size: 17px;
+    margin-left: 35px;
+}
+
+/* ================= OFFER ================= */
+.one{
+  font-size: 25px;
+  text-align: center;
+  margin-top: -222px;
+  margin-left: 100px;
+  line-height: 40px;
+}
+.two{
+  margin-left: 50px;
+  font-size: 20px;
+}
+.offer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:60px;
+}
+
+/* .offer-text h2{
+  font-size:25px;
+  text-align: center;
+  margin-left: 130px;
+  line-height: 90px;
+  
+} */
+
+/* .offer-text span{
+  color:#f5b400;
+} */
+
+.offer-text p{
+  font-size:25px;
+  margin-top:10px;
+ margin-left: 50px;
+}
+
+.offer-img img{
+  width:350px;
+  height: 350px;
+  margin-left: 40px;
+  margin-top: -70px;
+  
+}
+.offer-line{
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 50px;
+  line-height: 100px;
+ 
+}
+
+.black{ color:#000; }
+.yellow{ color:#f5b800; }
+.red{ color:#ff4d00; }
+
+.fade{
+  animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect{
+  0%{opacity:0;}
+  100%{opacity:1;}
+}
+/* question and answer */
+.faq-container{
+    width:90%;
+    margin:40px auto;
+}
+
+.faq-title{
+    text-align:center;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+/* SINGLE BOX */
+.faq-box{
+    border:2px solid #f1c40f;
+    border-radius:8px;
+    background:#fff;
+    overflow:hidden;
+     font-size: 20px;
+}
+
+.faq-item{
+    border-bottom:1px solid #f1c40f;
+}
+
+.faq-item:last-child{
+    border-bottom:none;
+}
+
+.faq-question{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px;
+    cursor:pointer;
+    
+}
+
+.faq-question h4{
+    margin:34px;
+   
+}
+
+.faq-answer{
+    display:none;
+    padding:0 16px 16px;
+    color:#555;
+    margin-left: 70px;
+}
+
+.faq-item.active .faq-answer{
+    display:block;
+}
+
+.faq-item.active .faq-question i{
+    transform:rotate(180deg);
+}
+
+.faq-question i{
+    transition:0.3s;
+}
+/* footer */
+footer{
+    background:#f4c915;
+    padding:40px 90px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+/* Logo section */
+.logo-section{
+    width:200px;
+    text-align:center;
+    margin-left: -84px;
+    margin-top: 10px;
+}
+
+.logo-section img{
+    width:150px;
+    border-radius:50%;
+    animation: logoFilter 1s infinite alternate;
+}
+
+/* FILTER animation (ON / OFF style) */
+@keyframes logoFilter{
+    0%{
+        filter: grayscale(100%);
+    }
+    100%{
+        filter: grayscale(0%);
+    }
+}
+
+.logo-text{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+/* Footer columns */
+.footer-col{
+    line-height:2.2;
+    min-width:200px;
+    
+}
+
+.footer-col h4{
+    margin-bottom:10px;
+   
+}
+
+/* Contact section */
+.contact{
+    line-height:3;
+}
+
+/* Social icons */
+.social-icons{
+    margin-top:15px;
+    margin-left: 80px;
+}
+
+.social-img{
+    width:50px;
+    height:50px;
+  
+    padding:6px;
+    border-radius:50%;
+    cursor:pointer;
+    vertical-align:middle;
+    
+}
+
+.social-icons i{
+    font-size:20px;
+    margin-left:10px;
+    background:#fff;
+    padding:8px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+/* Bottom text */
+.footer-bottom{
+    text-align:center;
+    margin-top:10px;
+    font-size:14px;
+}
+/* ================= CUSTOMIZE MODAL ================= */
+/* MAIN FORM */
+.custom-form{
+  width:1200px;
+  height:520px;
+  margin:40px auto;
+  background:#f4c400;
+  border-radius:18px;
+  padding:30px 40px;
+  position:relative;
+  border:2px dashed #000;
+}
+
+.custom-form h2{
+  text-align:center;
+  margin-bottom:30px;
+  font-weight:600;
+}
+
+/* GRID */
+.form-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  gap:35px 40px;
+}
+
+/* LABELS */
+.form-group label{
+  font-weight:600;
+  display:block;
+  margin-bottom:10px;
+  font-size:18px;
+}
+
+/* INPUTS */
+.form-group input,
+.form-group textarea{
+  width:100%;
+  padding:14px 16px;
+  border-radius:10px;
+  border:1.5px solid #000;
+  background:#f4c400;
+  font-size:16px;
+}
+
+/* MESSAGE AREA */
+.form-group.message{
+  grid-column:2 / span 1;
+}
+
+/* IMAGE LEFT */
+.preview-left{
+  position:absolute;
+  bottom:-1px;
+  left:40px;
+}
+
+.preview-left img{
+  width:180px;
+  height:180px;
+  border-radius:14px;
+  object-fit:cover;
+}
+
+/* IMAGE RIGHT UPLOAD */
+.preview-right{
+  position:absolute;
+  bottom:90px;
+  right:40px;
+  width:210px;
+  height:160px;
+  border:2px dashed #000;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.preview-right img{
+  width:90%;
+  height:90%;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* RADIO */
+.radio-group{
+  position:absolute;
+  bottom:60px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:50px;
+  font-size:20px;
+  font-weight:500;
+}
+
+.radio-group input{
+  transform:scale(1.3);
+  margin-right:8px;
+}
+
+/* SUBMIT */
+.submit-btn{
+  position:absolute;
+  bottom:40px;
+  right:70px;
+  padding:10px 28px;
+  border:none;
+  border-radius:20px;
+  background:#fff;
+  font-weight:600;
+  cursor:pointer;
+}
+/* ===== MODAL ===== */
+.modal{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+/* ===== SUCCESS MODAL ===== */
+.success-box{
+  width:1200px;
+  height:550px;
+  border-radius:18px;
+  position:relative;
+  overflow:hidden;
+  line-height: 50px;
+}
+
+.success-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(0.6);
+}
+
+.success-box h2{
+  position:absolute;
+  top:45%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color:#f4c400;
+  font-size:32px;
+  font-weight:600;
+  text-align:center;
+}
+
+.success-box p{
+  position:absolute;
+  top:58%;
+  left:50%;
+  transform:translateX(-50%);
+  color:#fff;
+  font-size:20px;
+  font-weight:500;
+}
+/* new */
+/* ===== FILTER SUBMIT BUTTON (IMAGE MATCH) ===== */
+.filter-submit{
+  background:#f4c400;
+  border:none;
+  padding:6px 22px;
+  border-radius:20px;
+  font-weight:600;
+  cursor:pointer;
+
+  display:block;
+  margin:20px auto 0;   /* 🔥 PERFECT CENTER */
+}
+/* ===== CUSTOMIZE FORM SUBMIT ===== */
+.custom-form .submit-btn{
+  position:absolute;
+  bottom:40px;
+  right:70px;
+  padding:10px 28px;
+  border:none;
+  border-radius:20px;
+  background:#fff;
+  font-weight:600;
+  cursor:pointer;
+}
+.dropdown{
+  display:none;
+  position:absolute;
+  top:30px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#fff;
+  width:200px;          /* 🔥 MATCH IMAGE */
+  padding:25px;
+  /* border-radius:18px; */
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  z-index:10;
+}
+/* PROFILE DROPDOWN */
+.profile-wrapper{
+  position:relative;
+}
+
+.account-box{
+  position:absolute;
+  top:90px;
+  right:-220px;
+  width:420px;
+ 
+  background:#f4c915;
+  border-radius:14px;
+  padding:20px;
+  display:none;
+  z-index:999;
+}
+
+.account-box h3{
+  font-size:22px;
+  margin-bottom:15px;
+  border-bottom:1px dashed #000;
+  padding-bottom:10px;
+}
+
+.account-box ul{
+  list-style:none;
+}
+
+.account-box ul li{
+  background:#000;
+  color:#fff;
+  padding:1px;
+  margin-bottom:22px;
+  width: 300px;
+  font-size:18px;
+  cursor:pointer;
+}
+
+.account-box ul li.logout{
+  margin-bottom:0;
+}
+/* notification  */
+/* NOTIFICATION */
+.notification-wrapper{
+  position:relative;
+}
+
+.notification-popup{
+  position:absolute;
+  top:60px;
+  right:-60px;
+  width:1100px;
+  background:#f4c915;
+  padding:20px 25px;
+  border-radius:8px;
+  display:none;
+  z-index:9999;
+}
+
+.notification-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.notification-popup p{
+  font-size:18px;
+  line-height:1.6;
+}
+
+.close-popup{
+  font-size:24px;
+  cursor:pointer;
+}
+.account-box ul li a{
+  text-decoration:none;
+  color:#fff;
+  display:block;
+  padding:10px;
+}
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .header-top{
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  nav ul{
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .header-search{
+    margin: 10px 0;
+    justify-content: center;
+  }
+
+  /* HERO */
+  .hero{
+    height: auto;
+  }
+
+  .hero-content{
+    position: static;
+    transform: none;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .hero h1,
+  .hero p,
+  .hero-buttons{
+    margin-left: 0;
+  }
+
+  .hero-buttons{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-rating{
+    position: static;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  /* GRIDS */
+  .choose-grid,
+  .products{
+    grid-template-columns: 1fr;
+    gap: 25px;
+    justify-items: center;
+  }
+
+  /* PRODUCT CARD */
+  .product-card{
+    width: 90%;
+    height: auto;
+  }
+
+  .product-card img{
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+  }
+
+  /* OFFER */
+  .offer{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .offer-img img{
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  /* FAQ */
+  .faq-container{
+    width: 95%;
+  }
+
+  /* FOOTER */
+  .footer-container{
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .social-icons{
+    margin-left: 0;
+  }
+
+  /* MODALS */
+  .custom-form,
+  .success-box{
+    width: 95%;
+    height: auto;
+  }
+
+}
+@media (min-width: 769px) and (max-width: 1024px){
+
+  .choose-grid,
+  .products{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .hero-content{
+    right: 20px;
+  }
+
+  .product-card{
+    width: 100%;
+  }
+
+  .custom-form{
+    width: 90%;
+  }
+
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+  <!-- TOP ROW -->
+  <div class="header-top">
+
+    <div class="logo">
+      <img src="logo image.jpg" alt="Logo">
+      <h1 class="logo-text">VibeyGiftoy</h1>
+       
+    </div>
+
+    <nav>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="Categories.html">Categories</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="contact us.html">Contact us</a></li>
+        <li><a href="About us.html">About us</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-icons">
+     <div class="profile-wrapper">
+  <img src="logo human image.jpg" class="profile" id="profileBtn">
+
+  <div class="account-box" id="accountBox">
+    <h3>My Accounts</h3>
+  <ul>
+  <li><a href="personal info.html">Account Information</a></li>
+  <li><a href="download invoice.html">My order</a></li>
+  <li><a href="track order.html">Tracking order</a></li>
+  <li><a href="password manager.html">Password Manager</a></li>
+  <li class="logout"><a href="logout.html">Logout</a></li>
+</ul>
+
+  </div>
+</div>
+
+      <a href="wishlist.html">
+  <i class="fa-regular fa-heart"></i>
+</a>
+      <a href="shop now second.html">
+  <i class="fa-solid fa-cart-shopping"></i>
+</a>
+     <div class="notification-wrapper">
+  <i class="fa-regular fa-bell" id="bellIcon"></i>
+
+  <!-- NOTIFICATION POPUP -->
+  <div class="notification-popup" id="notificationPopup">
+    <div class="notification-header">
+      🎁 <strong>Order/Delivery Notifications</strong>
+      <span class="close-popup" id="closePopup">&times;</span>
+    </div>
+
+    <p>
+      We offer fast and reliable delivery to ensure your gifts arrive fresh,
+      on time, and beautifully packaged. Choose from standard, express,
+      or same-day delivery options at checkout.
+    </p>
+  </div>
+</div>
+
+     
+    </div>
+
+  </div>
+
+  <!-- SEARCH ROW -->
+  <div class="header-search">
+    <div class="search-box">
+      <input type="text" placeholder="Search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+  </div>
+</header>
+
+<!-- hero section -->
+<section class="hero">
+
+  <div class="hero-content">
+    <h1>Wrapped with Love</h1>
+    <p>
+      Every gift tells a story – add your personal touch with thoughtful
+      wrapping and heartfelt notes
+    </p>
+
+    <div class="hero-buttons">
+      <a href="Categories.html" class="btn-primary">Explore now</a>
+     <a href="enquiry.html" class="enquiry-link">
+    Enquiry
+    <span class="dot-right"></span>
+  </a>
+    </div>
+  </div>
+
+  <!-- RATING LINE -->
+  <div class="hero-rating">
+    <div class="rating-avatars">
+      <img src="https://i.pravatar.cc/100?img=1">
+      <img src="https://i.pravatar.cc/100?img=2">
+      <img src="https://i.pravatar.cc/100?img=3">
+      <img src="https://i.pravatar.cc/100?img=4">
+    </div>
+
+    <div class="rating-text">
+      <span class="star">★</span>
+      <span>4.9k Ratings +</span><br>
+      
+    </div>
+  </div>
+
+</section>
+<!-- WHY CHOOSE US -->
+<section class="section">
+  <h3 class="section-title">Why Choose Us</h3>
+
+  <div class="choose-grid">
+    <div class="choose-item">
+      <img src="image 1.jpg">
+      <p>Curated Gift Collections</p>
+    </div>
+    <div class="choose-item">
+      <img src="image 2.jpg">
+      <p>Personalization options</p>
+    </div>
+    <div class="choose-item">
+      <img src="image 3.jpg">
+      <p>Fast & Reliable Delivery</p>
+    </div>
+    <div class="choose-item">
+      <img src="image 4.jpg">
+      <p>Easy & Secure Payments</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED -->
+<section class="section">
+  <h3 class="section-title">Featured collections</h3>
+
+  <div class="products">
+    <div class="product-card">
+     <div class="heart">
+  <div class="heart-icon">
+  <svg viewBox="0 0 24 24">
+    <path d="M12 21s-7.5-4.8-9.5-8.5C.5 9 2.5 5.5 6 5.5c2 0 3.5 1.2 4 2.5.5-1.3 2-2.5 4-2.5 3.5 0 5.5 3.5 3.5 7-2 3.7-9.5 8.5-9.5 8.5z"/>
+  </svg>
+</div>
+</div>
+      <img src="f image 1.png">
+      <p class="product-title">The Picture Frame set</p>
+      <p class="price">Rs.1000 Per Package</p>
+      <div class="buttons">
+       <a href="shop now second.html">
+  <button class="btn-yellow">Shop now</button>
+</a>
+
+        <button class="btn-outline">Customize</button>
+      </div>
+    </div>
+
+    <!-- duplicate cards -->
+    <div class="product-card">
+    <div class="heart">
+  <div class="heart-icon">
+  <svg viewBox="0 0 24 24">
+    <path d="M12 21s-7.5-4.8-9.5-8.5C.5 9 2.5 5.5 6 5.5c2 0 3.5 1.2 4 2.5.5-1.3 2-2.5 4-2.5 3.5 0 5.5 3.5 3.5 7-2 3.7-9.5 8.5-9.5 8.5z"/>
+  </svg>
+</div>
+</div>
+      <img src="f image 2.png">
+      <p class="product-title">The Picture Frame set</p>
+      <p class="price">Rs.1000 Per Package</p>
+      <div class="buttons">
+         <a href="shop now second.html">
+  <button class="btn-yellow">Shop now</button>
+</a>
+
+        <button class="btn-outline">Customize</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+     <div class="heart">
+  <div class="heart-icon">
+  <svg viewBox="0 0 24 24">
+    <path d="M12 21s-7.5-4.8-9.5-8.5C.5 9 2.5 5.5 6 5.5c2 0 3.5 1.2 4 2.5.5-1.3 2-2.5 4-2.5 3.5 0 5.5 3.5 3.5 7-2 3.7-9.5 8.5-9.5 8.5z"/>
+  </svg>
+</div>
+</div>
+      <img src="f image 3.png">
+      <p class="product-title">The Picture Frame set</p>
+      <p class="price">Rs.1000 Per Package</p>
+      <div class="buttons">
+           <a href="shop now second.html">
+  <button class="btn-yellow">Shop now</button>
+</a>
+
+        <button class="btn-outline">Customize</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+     <div class="heart">
+  <div class="heart-icon">
+  <svg viewBox="0 0 24 24">
+    <path d="M12 21s-7.5-4.8-9.5-8.5C.5 9 2.5 5.5 6 5.5c2 0 3.5 1.2 4 2.5.5-1.3 2-2.5 4-2.5 3.5 0 5.5 3.5 3.5 7-2 3.7-9.5 8.5-9.5 8.5z"/>
+  </svg>
+</div>
+</div>
+      <img src="f image 4.png">
+      <p class="product-title">The Picture Frame set</p>
+      <p class="price">Rs.1000 Per Package</p>
+      <div class="buttons">
+         <a href="shop now second.html">
+  <button class="btn-yellow">Shop now</button>
+</a>
+
+        <button class="btn-outline">Customize</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="section offer">
+  <div class="offer-text">
+    <h1 class="one">Special Offer & discounts</h1>
+    <div class="offer-line fade" id="offerText">
+    <h2>SEASON <span>COLLECTIONS</span> GET <span>30%</span></h2>
+    </div>
+    <h3 class="two">"Unwrap the Joy - Special Offers Just for you!"</h3>
+    <p>
+     Celebrate Every moment with thoughtful gifts at irresistible prices.Discover handpicked treasures for every occasion- now on limited-time discount!
+    </p>
+  </div>
+
+  <div class="offer-img">
+    <img src="special offer image.png">
+  </div>
+</section>
+
+<!--  -->
+<div class="faq-container">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+
+    <div class="faq-box">
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>1. What types of gifts do you offer?</h4>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                We offer a wide range of gifts for all occasion-birthdays, anniversaries,weddings, corporate events, and more. Our collection includes personalized items, luxury hampers,home decors custom keepsakes, and curated gift boxes.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>2. Do you offer gift wrapping or personalized messages?</h4>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Yes! We offer free gift wrapping and the option to include a personalized message with every order. Simply select the option during checkout.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>3. How long does delivery take?</h4>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Delivery times vary depending on your location and the product. Standard shipping usually takes 3–7 business days, while express shipping is available for 1–3 day delivery. Custom/personalized items may take an extra 1–2 days for processing.
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- footer -->
+<footer>
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="logo-section">
+            <img src="logo image.jpg" alt="Logo">
+            <h1 class="logo-text">VibeyGiftoy</h1>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="footer-col">
+            <h4>Customer service</h4>
+            My Account<br>
+            Checkup<br>
+            FAQ<br>
+            Return
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+            <h4>Company</h4>
+            About us<br>
+            Blogs<br>
+            Contact us<br>
+            Career
+        </div>
+
+        <!-- Information -->
+        <div class="footer-col">
+            <h4>Our information</h4>
+            Privacy<br>
+            Terms & Condition<br>
+            Customer Feed back
+        </div>
+
+        <!-- Contact -->
+        <div class="contact">
+            Mobile: 123-456-789<br>
+            Email: Vibeygif@gmail.com<br>
+            Address: 12, north city-001
+
+            <div class="social-icons">
+                <img src="whats up image.png" alt="WhatsApp" class="social-img">
+               <img src="facebook image.png" alt="WhatsApp" class="social-img">
+               <img src="insta image.png" alt="WhatsApp" class="social-img">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Giftey.co. All rights reserved.<br>
+        <strong>Terms & Conditions | Privacy Policy</strong>
+    </div>
+</footer>
+<!-- ================= CUSTOMIZE MODAL ================= -->
+<!-- ================= CUSTOMIZE MODAL ================= -->
+<div id="customizeModal" class="modal">
+
+  <div class="custom-form">
+    <h2>Gift Customization Details Form</h2>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Recipient’s Name</label>
+        <input type="text" value="David Johnson">
+      </div>
+
+      <div class="form-group">
+        <label>Color choice</label>
+        <input type="text" value="Golden Theme">
+      </div>
+
+      <div class="form-group">
+        <label>Date/month/year</label>
+        <input type="text" value="19/09/2025">
+      </div>
+
+      <div class="form-group">
+        <label>Fonts style</label>
+        <input type="text" value="Italic style">
+      </div>
+
+      <div class="form-group message">
+        <label>Custom Message</label>
+        <textarea rows="3">
+Wishing you a day filled with love, laughter, and gifts
+        </textarea>
+      </div>
+    </div>
+
+    <!-- LEFT IMAGE -->
+    <div class="preview-left">
+      <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48">
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="preview-right">
+      <img src="f image 1.png">
+    </div>
+
+    <!-- RADIO -->
+    <div class="radio-group">
+      <label><input type="radio" name="photo" checked> Yes</label>
+      <label><input type="radio" name="photo"> No</label>
+    </div>
+
+    <button class="submit-btn" id="customizeSubmit">Submit</button>
+
+  </div>
+
+</div>
+<!-- ================= SUCCESS MODAL ================= -->
+<div id="successModal" class="modal">
+
+  <div class="success-box">
+    <img src="customized image.png" alt="Success">
+    <h2>Customization details updated Success</h2>
+    <p>Check your Dashboard</p>
+  </div>
+
+</div>
+
+    
+</body>
+<script>
+  document.querySelectorAll('.heart-icon').forEach(icon=>{
+    icon.addEventListener('click',()=>{
+      icon.classList.toggle('active');
+    });
+  });
+// text change
+const texts = [
+  `
+  <span class="black">OFF SEASON</span>
+  <span class="yellow"> COLLECTIONS </span>
+  <span class="black">GET </span>
+  <span class="red">30%</span>
+  `,
+  `
+  <span class="black">NEW ARRIVAL</span>
+  <span class="yellow"> COLLECTIONS </span>
+  <span class="black">GET </span>
+  <span class="red">50%</span>
+  `
+];
+
+let index = 0;
+const offerText = document.getElementById("offerText");
+
+setInterval(() => {
+  offerText.classList.remove("fade");
+  void offerText.offsetWidth; // restart animation
+  offerText.classList.add("fade");
+
+  index = (index + 1) % texts.length;
+  offerText.innerHTML = texts[index];
+}, 3000);
+// question and answer
+const questions = document.querySelectorAll(".faq-question");
+
+questions.forEach(q => {
+    q.addEventListener("click", () => {
+        q.parentElement.classList.toggle("active");
+    });
+});
+/* ❤️ Heart toggle */
+document.querySelectorAll('.heart-icon').forEach(icon => {
+  icon.addEventListener('click', () => {
+    icon.classList.toggle('active');
+  });
+});
+
+/* 🎁 Open Customize Modal */
+document.querySelectorAll('.btn-outline').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.getElementById('customizeModal').style.display = 'flex';
+  });
+});
+
+/* ❌ Close Customize modal when clicking outside */
+document.getElementById('customizeModal').addEventListener('click', function(e){
+  if(e.target === this){
+    this.style.display = 'none';
+  }
+});
+
+/* ✅ Submit → Show Success */
+document.querySelector('.submit-btn').addEventListener('click', function(e){
+  e.preventDefault();
+
+  // close customize modal
+  document.getElementById('customizeModal').style.display = 'none';
+
+  // open success modal
+  document.getElementById('successModal').style.display = 'flex';
+});
+
+/* ❌ Close success modal on click */
+document.getElementById('successModal').addEventListener('click', function(e){
+  if(e.target === this){
+    this.style.display = 'none';
+  }
+});
+/* ✅ Submit → Show Success → Redirect Home */
+document.getElementById('customizeSubmit').addEventListener('click', function(e){
+  e.preventDefault();
+  e.stopPropagation();
+
+  // close customize modal
+  document.getElementById('customizeModal').style.display = 'none';
+
+  // open success modal
+  document.getElementById('successModal').style.display = 'flex';
+
+  // ⏳ redirect to home page after 2.5 seconds
+  setTimeout(() => {
+    window.location.href = "Main.html"; // 👈 your home page
+  }, 2500);
+});
+/* 🔽 FILTER DROPDOWN FUNCTION */
+function toggleDropdown(event, icon) {
+  event.stopPropagation();
+
+  const filterItem = event.currentTarget;
+  const dropdown = filterItem.querySelector('.dropdown');
+
+  // Close other open filters
+  document.querySelectorAll('.filter-item').forEach(item => {
+    if (item !== filterItem) {
+      item.classList.remove('open');
+      item.querySelector('.dropdown').style.display = 'none';
+    }
+  });
+
+  // Toggle current
+  filterItem.classList.toggle('open');
+  dropdown.style.display =
+    dropdown.style.display === 'block' ? 'none' : 'block';
+}
+
+/* Close filter when clicking outside */
+document.addEventListener('click', () => {
+  document.querySelectorAll('.filter-item').forEach(item => {
+    item.classList.remove('open');
+    item.querySelector('.dropdown').style.display = 'none';
+  });
+});
+// icon link 
+const profileBtn = document.getElementById("profileBtn");
+const accountBox = document.getElementById("accountBox");
+
+profileBtn.addEventListener("click", () => {
+  accountBox.style.display =
+    accountBox.style.display === "block" ? "none" : "block";
+});
+
+/* Close when clicking outside */
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".profile-wrapper")) {
+    accountBox.style.display = "none";
+  }
+});
+// notification
+const bellIcon = document.getElementById("bellIcon");
+const notificationPopup = document.getElementById("notificationPopup");
+const closePopup = document.getElementById("closePopup");
+
+/* Toggle popup */
+bellIcon.addEventListener("click", (e) => {
+  e.stopPropagation(); // IMPORTANT
+  notificationPopup.style.display =
+    notificationPopup.style.display === "block" ? "none" : "block";
+});
+
+/* Prevent popup click from closing */
+notificationPopup.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+/* Close with X */
+closePopup.addEventListener("click", () => {
+  notificationPopup.style.display = "none";
+});
+
+/* Close when clicking outside */
+document.addEventListener("click", () => {
+  notificationPopup.style.display = "none";
+});
+
+</script>
+</html>

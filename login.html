@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Register Free</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f7f2ef;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Main container */
+.wrapper{
+    width:90%;
+    max-width:1200px;
+    background:#fff5ef;
+    border-radius:30px;
+    display:flex;
+    overflow:hidden;
+}
+
+/* LEFT CARD */
+.card{
+    width:45%;
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    position:relative;
+    margin:30px;
+}
+
+.close{
+    position:absolute;
+    right:25px;
+    top:20px;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.card h2{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:30px;
+}
+
+/* Inputs */
+.card input{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border-radius:30px;
+    border:1.5px solid #f4b400;
+    outline:none;
+    font-size:15px;
+}
+
+/* Login row */
+.login-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:25px;
+}
+
+.login-btn{
+    background:#f4b400;
+    border:none;
+    padding:12px 40px;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.login-row a{
+    text-decoration:none;
+    color:#444;
+    font-size:14px;
+}
+
+/* Divider */
+.divider{
+    display:flex;
+    align-items:center;
+    margin:25px 0;
+}
+
+.divider span{
+    flex:1;
+    height:1px;
+    background:#f4b400;
+}
+
+.divider p{
+    margin:0 12px;
+    font-weight:bold;
+}
+
+/* Social box */
+.social{
+    border:1.5px solid #f4b400;
+    border-radius:30px;
+    padding:15px;
+    display:flex;
+    justify-content:space-around;
+    margin-bottom:20px;
+}
+
+.social i{
+    font-size:24px;
+    cursor:pointer;
+}
+
+.fa-google{color:#DB4437;}
+.fa-facebook{color:#1877F2;}
+.fa-instagram{color:#E1306C;}
+.fa-twitter{color:#1DA1F2;}
+
+/* Footer text */
+.footer{
+    text-align:center;
+    font-size:14px;
+}
+
+.footer a{
+    color:#f4b400;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.image-box{
+    width:55%;
+}
+
+.image-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    animation: logoPulse 3s infinite alternate;
+}
+
+@keyframes logoPulse{
+    from{
+        filter: grayscale(100%);
+    }
+    to{
+        filter: grayscale(0%);
+    }
+}
+
+
+/* Responsive */
+@media(max-width:900px){
+    .wrapper{
+        flex-direction:column;
+    }
+    .card{
+        width:90%;
+        margin:auto;
+    }
+    .image-box{
+        display:none;
+    }
+}
+@media (max-width:1024px){
+
+body{
+  padding:20px;
+}
+
+/* Main container */
+.wrapper{
+  max-width:900px;
+}
+
+/* Card */
+.card{
+  width:55%;
+  padding:30px;
+}
+
+.card h2{
+  font-size:26px;
+}
+
+/* Image */
+.image-box{
+  width:45%;
+}
+}
+/* Mobile devices (up to 767px) */
+@media (max-width: 767px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    
+    .card {
+        width: 90%;
+        margin: 20px auto;
+        padding: 30px 20px;
+    }
+    
+    .card h2 {
+        font-size: 24px;
+    }
+    
+    .image-box {
+        display: none;
+    }
+    
+    .login-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .login-btn {
+        width: 100%;
+    }
+}
+
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    body {
+        padding: 20px;
+    }
+    
+    .wrapper {
+        max-width: 900px;
+    }
+    
+    .card {
+        width: 55%;
+        padding: 30px;
+    }
+    
+    .card h2 {
+        font-size: 26px;
+    }
+    
+    .image-box {
+        width: 45%;
+    }
+}
+
+/* Laptops (1024px to 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .wrapper {
+        max-width: 1100px;
+    }
+    
+    .card {
+        width: 45%;
+        padding: 40px;
+    }
+}
+
+/* Desktop (1440px and above) */
+@media (min-width: 1440px) {
+    .wrapper {
+        max-width: 1400px;
+    }
+    
+    .card {
+        padding: 50px;
+    }
+    
+    .card h2 {
+        font-size: 32px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- LEFT CARD -->
+    <div class="card">
+        <div class="close">&times;</div>
+
+        <h2>Register Free !</h2>
+
+        <input type="email" placeholder="Enter your e-mail">
+        <input type="password" placeholder="Password">
+
+        <div class="login-row">
+           <button class="login-btn" onclick="goLogin()">Login</button>
+            <a href="#">Forget your password?</a>
+        </div>
+
+        <div class="divider">
+            <span></span>
+            <p>Sign Up Using</p>
+            <span></span>
+        </div>
+
+        <div class="social">
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+
+        <div class="footer">
+            Don’t have an account ? <a href="create account.html">Create New Account</a>
+        </div>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="image-box">
+        <img src="hero image.png" alt="Gift Image">
+    </div>
+
+</div>
+<script>
+    function goLogin(){
+  window.location.href = "Main.html";
+}
+</script>
+
+</body>
+</html>

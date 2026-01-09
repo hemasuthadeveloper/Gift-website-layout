@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+      
+        *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#fff;
+}
+
+/* ================= HEADER ================= */
+header{
+  width:100%;
+  border-bottom:1px solid #eee;
+}
+
+.header-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 60px 8px;
+}
+
+
+/* LOGO */
+.logo{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-left: -45px;
+  animation:logoFloat 3s ease-in-out infinite;
+}
+
+.logo img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+   animation:logoPulse 2s ease-in-out infinite alternate;
+   }
+ @keyframes logoPulse{
+  from{
+    filter: grayscale(100%);
+  }
+  to{
+    filter: grayscale(0%);
+  }
+}
+.logo span{
+  font-size:12px;
+  margin-top:4px;
+  color:#666;
+}
+.logo-text {
+    
+            font-family: 'Lobster', cursive;
+            font-size: 20px;
+            color: white;
+            text-shadow: 
+                -1px -1px 0 #000,  
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000,
+                 0px  2px 0 #000; 
+            letter-spacing: 1px;
+            user-select: none;
+            margin-top: 13px;
+        }
+
+/* NAV */
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:38px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  font-size:20px;
+  font-weight:600;
+  color:#222;
+}
+
+nav ul li a.active{
+  color:#f5a623;
+}
+
+/* ICONS */
+.header-icons{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+.header-icons i{
+  font-size:25px;
+  cursor:pointer;
+  gap:25px;
+}
+
+.profile{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* SEARCH ROW */
+.header-search{
+  display:flex;
+  justify-content:center;
+  padding-bottom:14px;
+  margin-top: -61px;
+  margin-left: 300px;
+}
+
+.search-box{
+  position:relative;
+  width:300px;
+}
+
+.search-box input{
+  width:100%;
+  padding:7px 34px 7px 14px;
+  border:2px solid #f5d58c;
+  border-radius:6px;
+  font-size:23px;
+  outline:none;
+  background-color: #F5F5F5;
+}
+
+.search-box i{
+  position:absolute;
+  right:12px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:13px;
+  color:#444;
+}
+/* REGISTER BUTTON */
+.register-btn{
+  background:#f5a623;
+  color:#fff;
+  padding:15px 40px;
+  border-radius:20px;
+  font-size:20px;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s ease;
+  color: #000;
+}
+
+.register-btn:hover{
+  background:#e09516;
+}
+ 
+/* ================= HERO ================= */
+.hero{
+  /* margin:20px 60px; */
+  height:320px;
+  border-radius:16px;
+  overflow:hidden;
+  background:url("hero image new.png") center/cover no-repeat;
+  margin-top: 30px;
+  position:relative;
+   animation:logoPulse 2s ease-in-out infinite alternate;
+   }
+ @keyframes logoPulse{
+  from{
+    filter: grayscale(100%);
+  }
+  to{
+    filter: grayscale(0%);
+  }
+}
+
+
+/* DARK OVERLAY */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to right,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.3) 45%,
+    rgba(0,0,0,0.7) 100%
+  );
+}
+
+/* CONTENT */
+.hero-content{
+  position:absolute;
+  right:70px;
+  top:50%;
+  transform:translateY(-50%);
+  max-width:460px;
+  color:#fff;
+  z-index:2;
+}
+
+.hero h1{
+  font-size:42px;
+  font-weight:700;
+  margin-bottom:12px;
+  margin-left: -200px;
+}
+
+.hero p{
+  font-size:24px;
+  line-height:1.6;
+  opacity:0.95;
+  margin-left: -200px;
+  
+}
+
+/* BUTTONS */
+.hero-buttons{
+  margin-top:22px;
+  display:flex;
+  gap:14px;
+  margin-left: -200px;
+}
+
+.btn-primary{
+  background:#f5b400;
+  color:white;
+  padding:10px 40px;
+  border-radius:30px;
+  font-size:20px;
+  font-weight:600;
+  text-decoration:none;
+}
+
+.btn-outline{
+  border:2px solid #f5b400;
+  color:#f5b400;
+  padding:10px 22px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:600;
+  text-decoration:none;
+}
+.enquiry-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  /* The custom underline line */
+  .enquiry-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: #ffffff;
+  }
+
+  /* The left dot on the underline */
+  .enquiry-link::before {
+    content: '';
+    position: absolute;
+    bottom: -7px; /* Adjusted to center on the line */
+    left: -2px;
+    width: 5px;
+    height: 5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+
+  /* The right dot on the underline */
+  .enquiry-link .dot-right {
+    position: absolute;
+    bottom: -7px;
+    right: -2px;
+    width: 5px;
+    height: 5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+
+  /* Hover effect for interactivity */
+  .enquiry-link:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+
+/* ================= RATING LINE ================= */
+.hero-rating{
+  position:absolute;
+  right:70px;
+  bottom:24px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  z-index:2;
+}
+
+/* AVATARS */
+.rating-avatars{
+  display:flex;
+}
+
+.rating-avatars img{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  border:2px solid #fff;
+  margin-left:-10px;
+  object-fit:cover;
+    animation:logoPulse 2s ease-in-out infinite alternate;
+   }
+ @keyframes logoPulse{
+  from{
+    filter: grayscale(100%);
+  }
+  to{
+    filter: grayscale(0%);
+  }
+}
+
+
+/* RATING TEXT */
+.rating-text{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:13px;
+  color:#fff;
+}
+
+.rating-text span{
+  font-weight:600;
+}
+
+.star{
+  color:#f5b400;
+  font-size:14px;
+}
+/* ================= WHY CHOOSE US ================= */
+.section{
+  padding:50px 37px;
+}
+
+.section-title{
+  text-align:center;
+  font-weight:600;
+  margin-bottom:35px;
+  font-size: 25px;
+}
+
+.choose-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:90px;
+  text-align:center;
+}
+
+.choose-item img{
+  width:150px;
+  height:200px;
+  border-radius:40px;
+  object-fit:cover;
+  margin-bottom:12px;
+}
+
+.choose-item p{
+  font-size:15px;
+}
+
+/* ================= FEATURED ================= */
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:48px;
+}
+
+.product-card{
+  border:1px solid black;
+  border-radius:14px;
+  /* padding:24px; */
+  width: 250px;
+  height: 400px;
+  position:relative;
+}
+
+.product-card img{
+  /* width:100%; */
+  width: 188px;
+  height: 250px;
+  border-radius:12px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.heart-icon{
+  position:absolute;
+  top:24px;
+  right:37px;
+  width:26px;
+  height:26px;
+  background:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  box-shadow:0 2px 6px rgba(0,0,0,0.15);
+}
+
+.heart-icon svg{
+  width:24px;
+  height:24px;
+  fill:none;
+  stroke:#f5b400;      /* YELLOW HEART */
+  stroke-width:2;
+}
+.heart-icon.active svg{
+  fill:#f5b400;
+  stroke:#f5b400;
+}
+
+.product-title{
+  font-size:17px;
+  margin-top:10px;
+  text-align: center;
+}
+
+.price{
+  font-size:12px;
+  margin:6px 0;
+}
+
+.price span{
+  color:red;
+  font-weight:600;
+}
+
+.buttons{
+  display:flex;
+  gap:8px;
+}
+
+.btn-yellow{
+  background:#f5b400;
+  border:none;
+  padding:6px 10px;
+  border-radius:14px;
+  font-size:11px;
+  font-weight:600;
+  margin-left: 35px;
+}
+
+.btn-outline{
+  background:#fff;
+  color: #000;
+  border:1px solid #ccc;
+  padding:6px 10px;
+  border-radius:14px;
+  font-size:11px;
+}
+.price{
+    color: red;
+    font-size: 17px;
+    margin-left: 35px;
+}
+
+/* ================= OFFER ================= */
+.one{
+  font-size: 25px;
+  text-align: center;
+  margin-top: -222px;
+  margin-left: 100px;
+  line-height: 40px;
+}
+.two{
+  margin-left: 50px;
+  font-size: 20px;
+}
+.offer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:60px;
+}
+
+/* .offer-text h2{
+  font-size:25px;
+  text-align: center;
+  margin-left: 130px;
+  line-height: 90px;
+  
+} */
+
+/* .offer-text span{
+  color:#f5b400;
+} */
+
+.offer-text p{
+  font-size:25px;
+  margin-top:10px;
+ margin-left: 50px;
+}
+
+.offer-img img{
+  width:350px;
+  height: 350px;
+  margin-left: 40px;
+  margin-top: -70px;
+  
+}
+.offer-line{
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 50px;
+  line-height: 100px;
+ 
+}
+
+.black{ color:#000; }
+.yellow{ color:#f5b800; }
+.red{ color:#ff4d00; }
+
+.fade{
+  animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect{
+  0%{opacity:0;}
+  100%{opacity:1;}
+}
+/* question and answer */
+.faq-container{
+    width:90%;
+    margin:40px auto;
+}
+
+.faq-title{
+    text-align:center;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+/* SINGLE BOX */
+.faq-box{
+    border:2px solid #f1c40f;
+    border-radius:8px;
+    background:#fff;
+    overflow:hidden;
+     font-size: 20px;
+}
+
+.faq-item{
+    border-bottom:1px solid #f1c40f;
+}
+
+.faq-item:last-child{
+    border-bottom:none;
+}
+
+.faq-question{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px;
+    cursor:pointer;
+    
+}
+
+.faq-question h4{
+    margin:34px;
+   
+}
+
+.faq-answer{
+    display:none;
+    padding:0 16px 16px;
+    color:#555;
+    margin-left: 70px;
+}
+
+.faq-item.active .faq-answer{
+    display:block;
+}
+
+.faq-item.active .faq-question i{
+    transform:rotate(180deg);
+}
+
+.faq-question i{
+    transition:0.3s;
+}
+/* footer */
+footer{
+    background:#f4c915;
+    padding:40px 90px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+/* Logo section */
+.logo-section{
+    width:200px;
+    text-align:center;
+    margin-left: -84px;
+    margin-top: 10px;
+}
+
+.logo-section img{
+    width:150px;
+    border-radius:50%;
+    animation: logoFilter 1s infinite alternate;
+}
+
+/* FILTER animation (ON / OFF style) */
+@keyframes logoFilter{
+    0%{
+        filter: grayscale(100%);
+    }
+    100%{
+        filter: grayscale(0%);
+    }
+}
+
+.logo-text{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+/* Footer columns */
+.footer-col{
+    line-height:2.2;
+    min-width:200px;
+    
+}
+
+.footer-col h4{
+    margin-bottom:10px;
+   
+}
+
+/* Contact section */
+.contact{
+    line-height:3;
+}
+
+/* Social icons */
+.social-icons{
+    margin-top:15px;
+    margin-left: 80px;
+}
+
+.social-img{
+    width:50px;
+    height:50px;
+  
+    padding:6px;
+    border-radius:50%;
+    cursor:pointer;
+    vertical-align:middle;
+    
+}
+
+.social-icons i{
+    font-size:20px;
+    margin-left:10px;
+    background:#fff;
+    padding:8px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+/* Bottom text */
+.footer-bottom{
+    text-align:center;
+    margin-top:10px;
+    font-size:14px;
+}
+@media (max-width:768px){
+
+/* HEADER */
+.header-top{
+  flex-direction:column;
+  gap:15px;
+}
+
+.logo{
+  margin-left:0;
+}
+
+nav ul{
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+}
+
+.header-search{
+  margin:10px 0;
+}
+
+/* HERO */
+.hero{
+  height:auto;
+  padding:40px 20px;
+}
+
+.hero-content{
+  position:static;
+  transform:none;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:32px;
+}
+
+.hero p{
+  font-size:18px;
+}
+
+.hero-buttons{
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* RATING */
+.hero-rating{
+  position:static;
+  justify-content:center;
+  margin-top:20px;
+}
+
+/* WHY CHOOSE */
+.choose-grid{
+  grid-template-columns:1fr;
+}
+
+/* PRODUCTS */
+.products{
+  grid-template-columns:1fr;
+}
+
+.product-card{
+  width:90%;
+}
+
+/* OFFER */
+.offer-img img{
+  width:250px;
+  height:auto;
+  margin-left:0;
+}
+
+/* FAQ */
+.faq-container{
+  width:95%;
+}
+
+.faq-question h4{
+  margin:10px;
+}
+
+/* FOOTER */
+.footer-container{
+  flex-direction:column;
+  text-align:center;
+  gap:25px;
+}
+
+.logo-section{
+  margin-left:0;
+}
+
+.social-icons{
+  margin-left:0;
+}
+}
+@media (max-width:480px){
+
+.hero h1{
+  font-size:26px;
+}
+
+.hero p{
+  font-size:16px;
+}
+
+.btn-primary{
+  font-size:16px;
+  padding:8px 25px;
+}
+
+.enquiry-link{
+  font-size:16px;
+}
+
+.section-title{
+  font-size:22px;
+}
+
+.product-title{
+  font-size:16px;
+}
+
+.price{
+  font-size:15px;
+}
+
+.faq-title{
+  font-size:22px;
+}
+
+.footer-bottom{
+  font-size:12px;
+}
+}
+
+    </style>
+</head>
+<body>
+    <header>
+  <!-- TOP ROW -->
+  <div class="header-top">
+
+    <div class="logo">
+      <img src="logo image.jpg" alt="Logo">
+      <h1 class="logo-text">VibeyGiftoy</h1>
+       
+    </div>
+
+    <nav>
+      <ul>
+        <li><a class="active" href="Main.html">Home</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">About us</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-icons">
+      <a href="login.html" class="register-btn">Register</a>
+     
+    </div>
+
+  </div>
+
+  <!-- SEARCH ROW -->
+  <div class="header-search">
+    <div class="search-box">
+      <input type="text" placeholder="Search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+  </div>
+</header>
+
+<!-- hero section -->
+<section class="hero">
+
+  <div class="hero-content">
+    <h1>Wrapped with Love</h1>
+    <p>
+      Every gift tells a story – add your personal touch with thoughtful
+      wrapping and heartfelt notes
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#" class="btn-primary">Explore now</a>
+     <a href="#" class="enquiry-link">
+    Enquiry
+    <span class="dot-right"></span>
+  </a>
+    </div>
+  </div>
+
+  <!-- RATING LINE -->
+  <div class="hero-rating">
+    <div class="rating-avatars">
+      <img src="https://i.pravatar.cc/100?img=1">
+      <img src="https://i.pravatar.cc/100?img=2">
+      <img src="https://i.pravatar.cc/100?img=3">
+      <img src="https://i.pravatar.cc/100?img=4">
+    </div>
+
+    <div class="rating-text">
+      <span class="star">★</span>
+      <span>4.9k Ratings +</span><br>
+      
+    </div>
+  </div>
+
+</section>
+<!-- WHY CHOOSE US -->
+<section class="section">
+  <h3 class="section-title">Why Choose Us</h3>
+
+  <div class="choose-grid">
+    <div class="choose-item">
+      <img src="image 1.jpg">
+      <p>Curated Gift Collections</p>
+    </div>
+    <div class="choose-item">
+      <img src="image 2.jpg">
+      <p>Personalization options</p>
+    </div>
+    <div class="choose-item">
+      <img src="image 3.jpg">
+      <p>Fast & Reliable Delivery</p>
+    </div>
+    <div class="choose-item">
+      <img src="image 4.jpg">
+      <p>Easy & Secure Payments</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED -->
+<section class="section">
+  <h3 class="section-title">Featured collections</h3>
+
+  <div class="products">
+    <div class="product-card">
+     <div class="heart">
+  <div class="heart-icon">
+  <svg viewBox="0 0 24 24">
+    <path d="M12 21s-7.5-4.8-9.5-8.5C.5 9 2.5 5.5 6 5.5c2 0 3.5 1.2 4 2.5.5-1.3 2-2.5 4-2.5 3.5 0 5.5 3.5 3.5 7-2 3.7-9.5 8.5-9.5 8.5z"/>
+  </svg>
+</div>
+</div>
+      <img src="f image 1.png">
+      <p class="product-title">The Picture Frame set</p>
+      <p class="price">Rs.1000 Per Package</p>
+      <div class="buttons">
+        <button class="btn-yellow">Shop now</button>
+        <button class="btn-outline">Customize</button>
+      </div>
+    </div>
+
+    <!-- duplicate cards -->
+    <div class="product-card">
+    <div class="heart">
+  <div class="heart-icon">
+  <svg viewBox="0 0 24 24">
+    <path d="M12 21s-7.5-4.8-9.5-8.5C.5 9 2.5 5.5 6 5.5c2 0 3.5 1.2 4 2.5.5-1.3 2-2.5 4-2.5 3.5 0 5.5 3.5 3.5 7-2 3.7-9.5 8.5-9.5 8.5z"/>
+  </svg>
+</div>
+</div>
+      <img src="f image 2.png">
+      <p class="product-title">The Picture Frame set</p>
+      <p class="price">Rs.1000 Per Package</p>
+      <div class="buttons">
+        <button class="btn-yellow">Shop now</button>
+        <button class="btn-outline">Customize</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+     <div class="heart">
+  <div class="heart-icon">
+  <svg viewBox="0 0 24 24">
+    <path d="M12 21s-7.5-4.8-9.5-8.5C.5 9 2.5 5.5 6 5.5c2 0 3.5 1.2 4 2.5.5-1.3 2-2.5 4-2.5 3.5 0 5.5 3.5 3.5 7-2 3.7-9.5 8.5-9.5 8.5z"/>
+  </svg>
+</div>
+</div>
+      <img src="f image 3.png">
+      <p class="product-title">The Picture Frame set</p>
+      <p class="price">Rs.1000 Per Package</p>
+      <div class="buttons">
+        <button class="btn-yellow">Shop now</button>
+        <button class="btn-outline">Customize</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+     <div class="heart">
+  <div class="heart-icon">
+  <svg viewBox="0 0 24 24">
+    <path d="M12 21s-7.5-4.8-9.5-8.5C.5 9 2.5 5.5 6 5.5c2 0 3.5 1.2 4 2.5.5-1.3 2-2.5 4-2.5 3.5 0 5.5 3.5 3.5 7-2 3.7-9.5 8.5-9.5 8.5z"/>
+  </svg>
+</div>
+</div>
+      <img src="f image 4.png">
+      <p class="product-title">The Picture Frame set</p>
+      <p class="price">Rs.1000 Per Package</p>
+      <div class="buttons">
+        <button class="btn-yellow">Shop now</button>
+        <button class="btn-outline">Customize</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="section offer">
+  <div class="offer-text">
+    <h1 class="one">Special Offer & discounts</h1>
+    <div class="offer-line fade" id="offerText">
+    <h2>SEASON <span>COLLECTIONS</span> GET <span>30%</span></h2>
+    </div>
+    <h3 class="two">"Unwrap the Joy - Special Offers Just for you!"</h3>
+    <p>
+     Celebrate Every moment with thoughtful gifts at irresistible prices.Discover handpicked treasures for every occasion- now on limited-time discount!
+    </p>
+  </div>
+
+  <div class="offer-img">
+    <img src="special offer image.png">
+  </div>
+</section>
+
+<!--  -->
+<div class="faq-container">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+
+    <div class="faq-box">
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>1. What types of gifts do you offer?</h4>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                We offer a wide range of gifts for all occasion-birthdays, anniversaries,weddings, corporate events, and more. Our collection includes personalized items, luxury hampers,home decors custom keepsakes, and curated gift boxes.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>2. Do you offer gift wrapping or personalized messages?</h4>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Yes! We offer free gift wrapping and the option to include a personalized message with every order. Simply select the option during checkout.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>3. How long does delivery take?</h4>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Delivery times vary depending on your location and the product. Standard shipping usually takes 3–7 business days, while express shipping is available for 1–3 day delivery. Custom/personalized items may take an extra 1–2 days for processing.
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- footer -->
+<footer>
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="logo-section">
+            <img src="logo image.jpg" alt="Logo">
+            <h1 class="logo-text">VibeyGiftoy</h1>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="footer-col">
+            <h4>Customer service</h4>
+            My Account<br>
+            Checkup<br>
+            FAQ<br>
+            Return
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+            <h4>Company</h4>
+            About us<br>
+            Blogs<br>
+            Contact us<br>
+            Career
+        </div>
+
+        <!-- Information -->
+        <div class="footer-col">
+            <h4>Our information</h4>
+            Privacy<br>
+            Terms & Condition<br>
+            Customer Feed back
+        </div>
+
+        <!-- Contact -->
+        <div class="contact">
+            Mobile: 123-456-789<br>
+            Email: Vibeygif@gmail.com<br>
+            Address: 12, north city-001
+
+            <div class="social-icons">
+                <img src="whats up image.png" alt="WhatsApp" class="social-img">
+               <img src="facebook image.png" alt="WhatsApp" class="social-img">
+               <img src="insta image.png" alt="WhatsApp" class="social-img">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Giftey.co. All rights reserved.<br>
+        <strong>Terms & Conditions | Privacy Policy</strong>
+    </div>
+</footer>
+
+    
+</body>
+<script>
+  document.querySelectorAll('.heart-icon').forEach(icon=>{
+    icon.addEventListener('click',()=>{
+      icon.classList.toggle('active');
+    });
+  });
+// text change
+const texts = [
+  `
+  <span class="black">OFF SEASON</span>
+  <span class="yellow"> COLLECTIONS </span>
+  <span class="black">GET </span>
+  <span class="red">30%</span>
+  `,
+  `
+  <span class="black">NEW ARRIVAL</span>
+  <span class="yellow"> COLLECTIONS </span>
+  <span class="black">GET </span>
+  <span class="red">50%</span>
+  `
+];
+
+let index = 0;
+const offerText = document.getElementById("offerText");
+
+setInterval(() => {
+  offerText.classList.remove("fade");
+  void offerText.offsetWidth; // restart animation
+  offerText.classList.add("fade");
+
+  index = (index + 1) % texts.length;
+  offerText.innerHTML = texts[index];
+}, 3000);
+// question and answer
+const questions = document.querySelectorAll(".faq-question");
+
+questions.forEach(q => {
+    q.addEventListener("click", () => {
+        q.parentElement.classList.toggle("active");
+    });
+});
+
+</script>
+</html>
