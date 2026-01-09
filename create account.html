@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sign Up</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f8f3ef;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* PAGE ANIMATION */
+.page{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    animation: pageEnter 0.8s ease forwards;
+}
+
+@keyframes pageEnter{
+    from{ transform: translateX(100%); opacity:0; }
+    to{ transform: translateX(0); opacity:1; }
+}
+
+.page.exit{
+    animation: pageExit 0.8s ease forwards;
+}
+
+@keyframes pageExit{
+    from{ transform: translateX(0); opacity:1; }
+    to{ transform: translateX(-100%); opacity:0; }
+}
+
+/* MAIN CONTAINER */
+.container{
+    width:90%;
+    max-width:1300px;
+    background:#fff6f1;
+    border-radius:35px;
+    display:flex;
+    overflow:hidden;
+}
+
+/* LEFT IMAGE */
+.left{
+    width:45%;
+}
+
+.left img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    animation: logoPulse 3s infinite alternate;
+}
+
+@keyframes logoPulse{
+    from{ filter: grayscale(100%); }
+    to{ filter: grayscale(0%); }
+}
+
+/* RIGHT CARD */
+.right{
+    width:55%;
+    background:#ffffff;
+    margin:35px;
+    border-radius:10px;
+    padding:60px 80px;
+    position:relative;
+}
+
+/* CLOSE ICON */
+.close{
+    position:absolute;
+    top:30px;
+    right:40px;
+    font-size:26px;
+    cursor:pointer;
+}
+
+/* TITLE */
+.right h1{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+/* INPUTS */
+.right input{
+    width:100%;
+    padding:18px 25px;
+    margin-bottom:30px;
+    border-radius:40px;
+    border:2px solid #f5b400;
+    font-size:16px;
+}
+
+/* BUTTON */
+.signup-btn{
+    width:55%;
+    margin:20px auto 45px;
+    display:block;
+    background:#f5c400;
+    border:none;
+    padding:18px;
+    font-size:22px;
+    border-radius:40px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    font-size:18px;
+}
+
+.footer a{
+    color:#f5b400;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* Mobile devices (up to 767px) */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        border-radius: 20px;
+    }
+    
+    .left {
+        display: none;
+    }
+    
+    .right {
+        width: 90%;
+        margin: 20px auto;
+        padding: 40px 25px;
+    }
+    
+    .close {
+        top: 20px;
+        right: 25px;
+        font-size: 22px;
+    }
+    
+    .right h1 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .right input {
+        padding: 15px 20px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+    
+    .signup-btn {
+        width: 100%;
+        margin: 15px auto 30px;
+        padding: 15px;
+        font-size: 18px;
+    }
+    
+    .footer {
+        font-size: 15px;
+    }
+    
+    #preview p {
+        font-size: 16px !important;
+    }
+    
+    #showName {
+        font-size: 18px !important;
+    }
+}
+
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 900px;
+    }
+    
+    .left {
+        width: 40%;
+    }
+    
+    .right {
+        width: 60%;
+        padding: 50px 60px;
+        margin: 30px;
+    }
+    
+    .right h1 {
+        font-size: 35px;
+    }
+    
+    .right input {
+        padding: 16px 22px;
+        margin-bottom: 25px;
+    }
+    
+    .signup-btn {
+        width: 65%;
+        font-size: 20px;
+        margin: 18px auto 40px;
+    }
+}
+
+/* Laptops (1024px to 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .container {
+        max-width: 1200px;
+    }
+    
+    .left {
+        width: 45%;
+    }
+    
+    .right {
+        width: 55%;
+        padding: 60px 70px;
+    }
+}
+
+/* Desktop (1440px and above) */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .right {
+        padding: 70px 90px;
+    }
+    
+    .right h1 {
+        font-size: 45px;
+        margin-bottom: 50px;
+    }
+    
+    .right input {
+        padding: 20px 28px;
+        margin-bottom: 35px;
+        font-size: 17px;
+    }
+    
+    .signup-btn {
+        width: 50%;
+        padding: 20px;
+        font-size: 24px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page" id="page">
+
+<div class="container">
+
+    <!-- LEFT IMAGE -->
+    <div class="left" data-aos="fade-right">
+        <img src="birthday gift.png" alt="Birthday">
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="right" data-aos="fade-left">
+        <div class="close">&times;</div>
+
+        <h1>Sign Up</h1>
+
+        <div id="preview" style="text-align:center; margin-bottom:30px;">
+            <p id="showName" style="font-size:20px; color:#f5b400;"></p>
+            <p id="showEmail" style="font-size:16px; color:#888;"></p>
+            <p id="showPassword" style="font-size:16px; color:#888;"></p>
+        </div>
+
+        <input type="text" id="nameInput" placeholder="Full Name">
+        <input type="email" id="emailInput" placeholder="Email">
+        <input type="password" id="passwordInput" placeholder="Password">
+
+       <button class="signup-btn" onclick="goNext()">Sign Up</button>
+        <div class="footer">
+            <span>Already have an account?</span>
+            <a onclick="goLogin()">Log in</a>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({
+    duration: 1000,
+    once: true
+});
+
+// LIVE PREVIEW
+document.getElementById("nameInput").addEventListener("input", e => {
+    showName.textContent = e.target.value;
+});
+document.getElementById("emailInput").addEventListener("input", e => {
+    showEmail.textContent = e.target.value;
+});
+document.getElementById("passwordInput").addEventListener("input", e => {
+    showPassword.textContent = "*".repeat(e.target.value.length);
+});
+
+// PAGE TRANSITION
+function goLogin(){
+    document.getElementById("page").classList.add("exit");
+    setTimeout(() => {
+        window.location.href = "login.html";
+    }, 800);
+}
+// lingk
+function goNext(){
+  window.location.href = "Main.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gifting Inspiration Blog</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+  *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#fff;
+}
+
+/* ================= HEADER ================= */
+header{
+  width:100%;
+  border-bottom:1px solid #eee;
+}
+
+.header-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 60px 8px;
+}
+
+
+/* LOGO */
+.logo{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-left: -45px;
+  animation:logoFloat 3s ease-in-out infinite;
+}
+
+.logo img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+   animation:logoPulse 2s ease-in-out infinite alternate;
+   }
+ @keyframes logoPulse{
+  from{
+    filter: grayscale(100%);
+  }
+  to{
+    filter: grayscale(0%);
+  }
+}
+.logo span{
+  font-size:12px;
+  margin-top:4px;
+  color:#666;
+}
+.logo-text {
+    
+            font-family: 'Lobster', cursive;
+            font-size: 20px;
+            color: white;
+            text-shadow: 
+                -1px -1px 0 #000,  
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000,
+                 0px  2px 0 #000; 
+            letter-spacing: 1px;
+            user-select: none;
+            margin-top: 13px;
+        }
+
+/* NAV */
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:38px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  font-size:20px;
+  font-weight:600;
+  color:#222;
+}
+
+nav ul li a.active{
+  color:#f5a623;
+}
+
+/* ICONS */
+.header-icons{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+.header-icons i{
+  font-size:25px;
+  cursor:pointer;
+  gap:25px;
+}
+
+.profile{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* SEARCH ROW */
+.header-search{
+  display:flex;
+  justify-content:center;
+  padding-bottom:14px;
+  margin-top: -61px;
+  margin-left: 300px;
+}
+
+.search-box{
+  position:relative;
+  width:300px;
+}
+
+.search-box input{
+  width:100%;
+  padding:7px 34px 7px 14px;
+  border:2px solid #f5d58c;
+  border-radius:6px;
+  font-size:23px;
+  outline:none;
+  background-color: #F5F5F5;
+}
+
+.search-box i{
+  position:absolute;
+  right:12px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:13px;
+  color:#444;
+}
+/* ================= MAIN ================= */
+.page-wrapper{
+  max-width:1200px;
+  margin:60px auto;
+  padding:0 40px;
+}
+
+.page-title{
+  text-align:center;
+  font-size:28px;
+  margin-bottom:40px;
+}
+
+/* HERO IMAGE */
+.hero-image img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:6px;
+  margin-bottom:40px;
+}
+
+/* FEATURED BLOG */
+.blog-layout{
+  display:grid;
+  grid-template-columns:3fr 1fr;
+  gap:30px;
+}
+
+.featured-blog h2{
+  color:#f5b400;
+  margin-bottom:14px;
+}
+
+.featured-blog p{
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:10px;
+}
+
+.read-more-link{
+  color:#ff5722;
+  font-size:18px;
+  text-decoration:none;
+}
+
+/* CATEGORY BOX */
+.category-box{
+  background:#f5b400;
+  padding:20px;
+  border-radius:10px;
+}
+
+.category-box ul{
+  padding-left:20px;
+}
+
+/* ================= GRID LAYOUT ================= */
+.blog-grid{
+  max-width:1200px;
+  margin:60px auto;
+  padding:40px;
+  display:grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap:30px;
+}
+
+/* LEFT COLUMN */
+.blog-grid__left{
+  display:flex;
+  flex-direction:column;
+}
+
+/* MIDDLE COLUMN */
+.blog-grid__middle{
+  display:grid;
+  grid-template-rows: 1fr 1fr;
+  gap:20px;
+}
+
+/* RIGHT COLUMN */
+.blog-grid__right{
+  display:grid;
+ grid-template-rows:auto 1fr auto;
+}
+
+/* ================= LEFT CARD ================= */
+.blog-card__image{
+  width:100%;
+  height:480px;
+  object-fit:cover;
+  border-radius:6px;
+}
+
+.blog-card__content{
+  padding-top:18px;
+}
+
+.blog-card__meta{
+  color:#f4a300;
+  font-size:14px;
+  margin-bottom:6px;
+}
+
+.blog-card__title{
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.blog-card__text{
+  font-size:14px;
+  color:#555;
+  line-height:1.6;
+}
+
+.blog-card__link{
+  display:inline-block;
+  margin-top:10px;
+  color: #000;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* ================= MIDDLE IMAGES ================= */
+.img-middle-top{
+  width:425px;
+  height:272px;
+  object-fit:cover;
+  border-radius:6px;
+  margin-left: 30px;
+}
+
+.img-middle-bottom{
+  width:300px;
+  height:400px;
+  object-fit:cover;
+  border-radius:6px;
+  align-self:start;
+  justify-self:center;
+  margin-top: -70px;
+}
+
+/* ================= RIGHT CONTENT ================= */
+.recent-title{
+  color:#f4a300;
+  margin-bottom:12px;
+}
+
+.recent-item{
+  font-size:14px;
+  margin-bottom:6px;
+}
+
+.recent-date{
+  font-size:13px;
+  color:#888;
+  margin-bottom:12px;
+}
+
+.recent-highlight{
+  align-self:end;
+}
+
+.recent-highlight h4{
+  color:#f4a300;
+  font-size:15px;
+  margin-bottom:6px;
+   align-self:end;
+   margin-top: -300px;
+}
+
+.recent-highlight p{
+  font-size:14px;
+  color:#555;
+  line-height:1.6;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:992px){
+  .blog-grid{
+    grid-template-columns:1fr;
+  }
+
+  .img-middle-bottom{
+    width:100%;
+    height:260px;
+  }
+}
+/* footer */
+footer{
+    background:#f4c915;
+    padding:40px 90px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+/* Logo section */
+.logo-section{
+    width:200px;
+    text-align:center;
+    margin-left: -84px;
+    margin-top: 10px;
+}
+
+.logo-section img{
+    width:150px;
+    border-radius:50%;
+    animation: logoFilter 1s infinite alternate;
+}
+
+/* FILTER animation (ON / OFF style) */
+@keyframes logoFilter{
+    0%{
+        filter: grayscale(100%);
+    }
+    100%{
+        filter: grayscale(0%);
+    }
+}
+
+.logo-text{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+/* Footer columns */
+.footer-col{
+    line-height:2.2;
+    min-width:200px;
+    
+}
+
+.footer-col h4{
+    margin-bottom:10px;
+   
+}
+
+/* Contact section */
+.contact{
+    line-height:3;
+}
+
+/* Social icons */
+.social-icons{
+    margin-top:15px;
+    margin-left: 80px;
+}
+
+.social-img{
+    width:50px;
+    height:50px;
+  
+    padding:6px;
+    border-radius:50%;
+    cursor:pointer;
+    vertical-align:middle;
+    
+}
+
+.social-icons i{
+    font-size:20px;
+    margin-left:10px;
+    background:#fff;
+    padding:8px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+/* Bottom text */
+.footer-bottom{
+    text-align:center;
+    margin-top:10px;
+    font-size:14px;
+}
+/* PROFILE DROPDOWN */
+.profile-wrapper{
+  position:relative;
+}
+
+.account-box{
+  position:absolute;
+  top:90px;
+  right:-220px;
+  width:420px;
+ 
+  background:#f4c915;
+  border-radius:14px;
+  padding:20px;
+  display:none;
+  z-index:999;
+}
+
+.account-box h3{
+  font-size:22px;
+  margin-bottom:15px;
+  border-bottom:1px dashed #000;
+  padding-bottom:10px;
+}
+
+.account-box ul{
+  list-style:none;
+}
+
+.account-box ul li{
+  background:#000;
+  color:#fff;
+  padding:1px;
+  margin-bottom:22px;
+  width: 300px;
+  font-size:18px;
+  cursor:pointer;
+}
+
+.account-box ul li.logout{
+  margin-bottom:0;
+}
+/* notification  */
+/* NOTIFICATION */
+.notification-wrapper{
+  position:relative;
+}
+
+.notification-popup{
+  position:absolute;
+  top:60px;
+  right:-60px;
+  width:1100px;
+  background:#f4c915;
+  padding:20px 25px;
+  border-radius:8px;
+  display:none;
+  z-index:9999;
+}
+
+.notification-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.notification-popup p{
+  font-size:18px;
+  line-height:1.6;
+}
+
+.close-popup{
+  font-size:24px;
+  cursor:pointer;
+}
+.account-box ul li a{
+  text-decoration:none;
+  color:#fff;
+  display:block;
+  padding:10px;
+}
+@media (max-width: 768px){
+
+/* ========== HEADER ========== */
+.header-top{
+  flex-direction: column;
+  padding: 15px;
+}
+
+.logo{
+  margin-left: 0;
+}
+
+.logo img{
+  width: 120px;
+  height: 120px;
+}
+
+nav ul{
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+nav ul li a{
+  font-size: 16px;
+}
+
+.header-icons{
+  margin-top: 15px;
+}
+
+/* SEARCH */
+.header-search{
+  margin: 10px auto 0;
+  margin-left: 0;
+}
+
+.search-box{
+  width: 90%;
+}
+
+.search-box input{
+  font-size: 16px;
+}
+
+/* ========== PAGE WRAPPER ========== */
+.page-wrapper{
+  padding: 0 20px;
+  margin: 30px auto;
+}
+
+.page-title{
+  font-size: 22px;
+}
+
+/* HERO IMAGE */
+.hero-image img{
+  height: 180px;
+}
+
+/* FEATURED BLOG */
+.blog-layout{
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.featured-blog p{
+  font-size: 15px;
+}
+
+/* CATEGORY BOX */
+.category-box{
+  text-align: center;
+}
+
+/* ========== BLOG GRID ========== */
+.blog-grid{
+  grid-template-columns: 1fr;
+  padding: 20px;
+  gap: 40px;
+}
+
+/* LEFT */
+.blog-card__image{
+  height: 260px;
+}
+
+.blog-card__title{
+  font-size: 16px;
+}
+
+/* MIDDLE */
+.img-middle-top{
+  width: 100%;
+  height: 220px;
+  margin-left: 0;
+}
+
+.img-middle-bottom{
+  width: 100%;
+  height: 260px;
+  margin-top: 0;
+}
+
+/* RIGHT */
+.recent-highlight h4{
+  margin-top: 0;
+}
+
+/* ========== FOOTER ========== */
+footer{
+  padding: 30px 20px;
+}
+
+.footer-container{
+  flex-direction: column;
+  text-align: center;
+  gap: 25px;
+}
+
+.logo-section{
+  margin-left: 0;
+}
+
+.social-icons{
+  margin-left: 0;
+}
+
+/* ========== DROPDOWNS ========== */
+.account-box{
+  right: 0;
+  width: 90%;
+}
+
+.notification-popup{
+  width: 95%;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+}
+
+}
+@media (min-width: 769px) and (max-width: 1024px){
+
+/* HEADER */
+.header-top{
+  padding: 20px;
+}
+
+.logo{
+  margin-left: 0;
+}
+
+nav ul{
+  gap: 20px;
+}
+
+.header-search{
+  margin-left: 0;
+}
+
+/* PAGE */
+.page-wrapper{
+  padding: 0 30px;
+}
+
+/* BLOG LAYOUT */
+.blog-layout{
+  grid-template-columns: 2fr 1fr;
+}
+
+/* BLOG GRID */
+.blog-grid{
+  grid-template-columns: 1fr 1fr;
+}
+
+/* MIDDLE IMAGES */
+.img-middle-top{
+  width: 100%;
+  height: 240px;
+  margin-left: 0;
+}
+
+.img-middle-bottom{
+  width: 100%;
+  height: 300px;
+  margin-top: 0;
+}
+
+/* FOOTER */
+.footer-container{
+  gap: 30px;
+}
+
+.notification-popup{
+  width: 90%;
+}
+
+}
+
+
+</style>
+</head>
+
+<body>
+
+ <header>
+  <!-- TOP ROW -->
+  <div class="header-top">
+
+    <div class="logo">
+      <img src="logo image.jpg" alt="Logo">
+      <h1 class="logo-text">VibeyGiftoy</h1>
+       
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="Categories.html">Categories</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a  class="active"href="blog.html">Blogs</a></li>
+        <li><a href="contact us.html">Contact us</a></li>
+        <li><a href="About us.html">About us</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-icons">
+     <div class="profile-wrapper">
+  <img src="logo human image.jpg" class="profile" id="profileBtn">
+
+  <div class="account-box" id="accountBox">
+    <h3>My Accounts</h3>
+    <ul>
+  <li><a href="personal info.html">Account Information</a></li>
+  <li><a href="download invoice.html">My order</a></li>
+  <li><a href="track order.html">Tracking order</a></li>
+  <li><a href="password manager.html">Password Manager</a></li>
+  <li class="logout"><a href="logout.html">Logout</a></li>
+</ul>
+  </div>
+</div>
+
+      <a href="wishlist.html">
+  <i class="fa-regular fa-heart"></i>
+</a>
+      <a href="shop now second.html">
+  <i class="fa-solid fa-cart-shopping"></i>
+</a>
+     <div class="notification-wrapper">
+  <i class="fa-regular fa-bell" id="bellIcon"></i>
+
+  <!-- NOTIFICATION POPUP -->
+  <div class="notification-popup" id="notificationPopup">
+    <div class="notification-header">
+      🎁 <strong>Order/Delivery Notifications</strong>
+      <span class="close-popup" id="closePopup">&times;</span>
+    </div>
+
+    <p>
+      We offer fast and reliable delivery to ensure your gifts arrive fresh,
+      on time, and beautifully packaged. Choose from standard, express,
+      or same-day delivery options at checkout.
+    </p>
+  </div>
+</div>
+
+     
+    </div>
+
+  </div>
+
+  <!-- SEARCH ROW -->
+  <div class="header-search">
+    <div class="search-box">
+      <input type="text" placeholder="Search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+  </div>
+</header>
+<main class="page-wrapper">
+
+  <h1 class="page-title">Gifting Inspiration Blog</h1>
+
+  <div class="hero-image">
+    <img src="blog image.png">
+  </div>
+
+  <section class="blog-layout">
+    <div class="featured-blog">
+      <h2>Ultimate Holiday Gift Guide 2025</h2>
+       <p>
+        The holiday season is here, and finding the perfect gift can feel overwhelming.
+        Whether you're shopping for family, friends, or colleagues, our comprehensive
+        guide has something special for everyone on your list.
+      </p>
+      <p>Holiday GiftsGift Guide</p>
+      <a href="#" class="read-more-link">Read More →</a>
+    </div>
+
+    <aside class="category-box">
+      <h3>Popular Categories</h3>
+      <ul>
+        <li>Holiday Gifts</li>
+        <li>Birthday Ideas</li>
+        <li>Wedding Gifts</li>
+        <li>Corporate Gifts</li>
+      </ul>
+    </aside>
+  </section>
+
+</main>
+
+<div class="blog-grid">
+
+  <!-- LEFT -->
+  <div class="blog-grid__left">
+    <img src="blog image 1.png" class="blog-card__image" alt="">
+    <div class="blog-card__content">
+      <div class="blog-card__meta">Michael Chen – Dec 10, 2025</div>
+      <div class="blog-card__title">10 Personalized Gift Ideas That Show You Care</div>
+      <div class="blog-card__text">
+        Make your gifts truly meaningful with creative personalization ideas...
+      </div>
+      <a href="#" class="blog-card__link">Read More →</a>
+    </div>
+  </div>
+
+  <!-- MIDDLE -->
+  <div class="blog-grid__middle">
+    <img src="blog image 2.png" class="img-middle-top" alt="">
+    <img src="blog image 3.png" class="img-middle-bottom" alt="">
+  </div>
+
+  <!-- RIGHT -->
+  <div class="blog-grid__right">
+    <div>
+      <div class="recent-title">Recent Posts</div>
+
+      <div class="recent-item">Last-Minute Gift Wrapping Hacks</div>
+      <div class="recent-date">Dec 5, 2025</div>
+
+      <div class="recent-item">Gifts for the Tech Enthusiast</div>
+      <div class="recent-date">Dec 3, 2025</div>
+    </div>
+
+    <div class="recent-highlight">
+      <h4>Emma Davis – Dec 8, 2025</h4>
+      <p>Thoughtful Gifts Under $25</p>
+      <p>
+        Great gifts don’t have to break the bank. Discover amazing options...
+      </p>
+      <a href="#" class="blog-card__link">Read More →</a>
+    </div>
+  </div>
+
+</div>
+<!-- footer -->
+<footer>
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="logo-section">
+            <img src="logo image.jpg" alt="Logo">
+            <h1 class="logo-text">VibeyGiftoy</h1>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="footer-col">
+            <h4>Customer service</h4>
+            My Account<br>
+            Checkup<br>
+            FAQ<br>
+            Return
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+            <h4>Company</h4>
+            About us<br>
+            Blogs<br>
+            Contact us<br>
+            Career
+        </div>
+
+        <!-- Information -->
+        <div class="footer-col">
+            <h4>Our information</h4>
+            Privacy<br>
+            Terms & Condition<br>
+            Customer Feed back
+        </div>
+
+        <!-- Contact -->
+        <div class="contact">
+            Mobile: 123-456-789<br>
+            Email: Vibeygif@gmail.com<br>
+            Address: 12, north city-001
+
+            <div class="social-icons">
+                <img src="whats up image.png" alt="WhatsApp" class="social-img">
+               <img src="facebook image.png" alt="WhatsApp" class="social-img">
+               <img src="insta image.png" alt="WhatsApp" class="social-img">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Giftey.co. All rights reserved.<br>
+        <strong>Terms & Conditions | Privacy Policy</strong>
+    </div>
+</footer>
+
+
+</body>
+<script>
+  // icon link 
+const profileBtn = document.getElementById("profileBtn");
+const accountBox = document.getElementById("accountBox");
+
+profileBtn.addEventListener("click", () => {
+  accountBox.style.display =
+    accountBox.style.display === "block" ? "none" : "block";
+});
+
+/* Close when clicking outside */
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".profile-wrapper")) {
+    accountBox.style.display = "none";
+  }
+});
+// notification
+const bellIcon = document.getElementById("bellIcon");
+const notificationPopup = document.getElementById("notificationPopup");
+const closePopup = document.getElementById("closePopup");
+
+/* Toggle popup */
+bellIcon.addEventListener("click", (e) => {
+  e.stopPropagation(); // IMPORTANT
+  notificationPopup.style.display =
+    notificationPopup.style.display === "block" ? "none" : "block";
+});
+
+/* Prevent popup click from closing */
+notificationPopup.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+/* Close with X */
+closePopup.addEventListener("click", () => {
+  notificationPopup.style.display = "none";
+});
+
+/* Close when clicking outside */
+document.addEventListener("click", () => {
+  notificationPopup.style.display = "none";
+});
+</script>
+</html>
